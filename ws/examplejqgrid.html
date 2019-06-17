@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="jquery.techbytarun.excelexportjs.js"></script>
+</head>
+<body>
+    <div id="dvxml">
+    </div>
+    <div>
+        <!--<button id="btnExport">Export</button>-->
+		<a id="btnExport" href="#" download="">Export</a>
+		</div>
+</body>
+</html>
+<script>
+    $(document).ready(function () {
+        $("#btnExport").click(function () {
+            var dataobj;
+
+            $.ajax({
+                type: "GET"
+                , async: false
+                , url: "http://model-r.jbrj.gov.br/ws/?"
+                , dataType: "json"
+                , success: function (data) {
+                    dataobj = data;
+					alert(data);
+                }
+                , error: function (xhr, ajaxOptions, thrownError) {
+				alert('erro');
+                }
+            });
+
+            var uri = $("#dvxml").excelexportjs({
+                containerid: "dvxml"
+                , datatype: 'json'
+				, dataset: dataobj
+				, returnUri: true
+				, columns: [
+                    { headertext: "idexperiment", datatype: "number", datafield: "idexperiment", ishidden: false }
+                    , { headertext: "First Name", datatype: "string", datafield: "fname", width: "100px" }
+                    , { headertext: "Last Name", datatype: "string", datafield: "lname", ishidden: false, width: "100px" }
+                    , { headertext: "Username", datatype: "string", datafield: "uname", ishidden: true }
+                    , { headertext: "Date", datatype: "date", format: "xxxx,xx", datafield: "dt", ishidden: false, width: "150px" }
+                ]
+				
+            });
+			$(this).attr('download', 'ExportToExcel.xls').attr('href', uri).attr('target', '_blank');
+        });
+    });
+</script>

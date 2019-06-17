@@ -1,0 +1,2622 @@
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704146 PhysicalObject           ALCB PreservedSpecimen      2704146
+6 2704147 PhysicalObject           ALCB PreservedSpecimen      2704147
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB001170          178
+6    ALCB000958         5188
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                            Queiroz, EP;Queiroz, E.P.
+6                              Guedes, ML;Andrade-Lima, D,Guedes, M.L.
+                                                                       associatedMedia
+1  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/11/70/ALCB001170.JPG
+6  http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/58/ALCB000958.JPG
+  year month day country stateProvince municipality
+1 1999     9   8  Brasil         Bahia     Salvador
+2 1993    NA  NA  Brasil         Bahia        Cairu
+3 2002     2   3  Brasil         Bahia    Caravelas
+4 2009     5   2  Brasil         Bahia        Piatã
+5 2003     9  23  Brasil         Bahia     Salvador
+6 1996    NA  NA  Brasil         Bahia    Vera Cruz
+                       locality decimalLatitude decimalLongitude identifiedBy
+1 Região Metropolitana Salvador       -12.58000        -38.30000   Guedes, ML
+2                     Baixo Sul       -13.29000        -39.02000             
+3                   Extremo Sul       -17.44083        -39.45167   Guedes, ML
+4            Chapada Diamantina       -13.04472        -41.53389   Guedes, ML
+5 Região Metropolitana Salvador       -12.55389        -38.25389             
+6 Região Metropolitana Salvador       -12.57000        -38.36000             
+  dateIdentified typeStatus                         scientificName       genus
+1         9/1999                 Lygodiaceae Lygodium volubile Sw.    Lygodium
+2          s. d.                                 Anemiaceae Anemia      Anemia
+3          s. d.            Bignoniaceae Fridericia speciosa Mart.  Fridericia
+4         8/2009                                 Anemiaceae Anemia      Anemia
+5          s. d.                              Pteridaceae Adiantum    Adiantum
+6          s. d.                           Orchidaceae Anacheilium Anacheilium
+        family specificEpithet infraspecificEpithet taxonRank
+1  Lygodiaceae        volubile                        ESPECIE
+2   Anemiaceae                                         GENERO
+3 Bignoniaceae        speciosa                        ESPECIE
+4   Anemiaceae                                         GENERO
+5  Pteridaceae                                         GENERO
+6  Orchidaceae                                         GENERO
+  scientificNameAuthorship
+1                      Sw.
+2                         
+3                    Mart.
+4                         
+5                         
+6                         

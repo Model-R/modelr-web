@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Euterpe edulis Mart. 3 maxent" 0.99044778 0.72390373 0.72390373 0.52667709 0.89315166 0.72688891 0.524324324324324 0.237237237237237 "maxent" 3

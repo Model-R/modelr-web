@@ -1,0 +1,53 @@
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,color-stop(rgba(0,0,0,0.5) 0),color-stop(rgba(0,0,0,0.0001) 100%));
+    background-image: none !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1);
+}
+
+.carousel-control.right {
+    background-image: -webkit-linear-gradient(left,color-stop(rgba(0,0,0,0.5) 0),color-stop(rgba(0,0,0,0.0001) 100%));
+    background-image: none !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1);
+}
+
+.carousel-control.right:hover {
+    background-color: #adadad61;
+}
+
+.carousel-control.left:hover {
+    background-color: #adadad61;
+}
+
+.carousel-indicators {
+    bottom: -30px;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 \9;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #0a150a;
+    border-radius: 10px;
+}
+
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #0a150a;
+}
+
+.modal-image {
+    width: 560px;
+}
+
+.modal-paragraph {
+    font-size: 16px;
+    text-align: justify;
+    font-family: Montserrat;
+}

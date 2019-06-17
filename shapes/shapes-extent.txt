@@ -1,0 +1,43 @@
+extent
+
+amazonia
+class       : Extent 
+xmin        : -73.98005 
+xmax        : -43.6135 
+ymin        : -16.30544 
+ymax        : 5.250803 
+
+caatinga
+class       : Extent 
+xmin        : -44.50842 
+xmax        : -35.17171 
+ymin        : -16.08848 
+ymax        : -2.808325 
+
+cerrado
+class       : Extent 
+xmin        : -60.10942 
+xmax        : -41.52177 
+ymin        : -24.68463 
+ymax        : -2.340445 
+
+mata atlantica
+class       : Extent 
+xmin        : -55.66303 
+xmax        : -34.82286 
+ymin        : -29.95134 
+ymax        : -5.153689 
+
+pampa
+class       : Extent 
+xmin        : -57.64378 
+xmax        : -49.71537 
+ymin        : -33.75435 
+ymax        : -28.08308 
+
+pantanal
+class       : Extent 
+xmin        : -59.18836 
+xmax        : -54.92181 
+ymin        : -22.11797 
+ymax        : -15.52349 

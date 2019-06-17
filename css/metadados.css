@@ -1,0 +1,17 @@
+﻿.metadados-title{
+    font-size: 18px;
+    background-color: #5bc0de !important;
+    color: white !important;
+}
+
+.metadados-fieldset{
+	display: block;
+}
+
+fieldset .panel {
+	border-color: #5bc0de !important;
+}
+
+fieldset p {
+	font-size: 14px;
+}

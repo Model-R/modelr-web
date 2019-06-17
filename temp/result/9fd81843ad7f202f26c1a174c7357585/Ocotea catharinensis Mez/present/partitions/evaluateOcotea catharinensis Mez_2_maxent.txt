@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Ocotea catharinensis Mez 2 maxent" 0.9032969 0.71510102 0.71510102 0.05427052 0.90423794 0.7172717 0.744011976047904 0.592814371257485 "maxent" 2

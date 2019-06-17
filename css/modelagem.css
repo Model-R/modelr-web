@@ -1,0 +1,14 @@
+.erro-modelagem {
+	border: 2px solid;
+    padding: 10px;
+    border-color: red !important;
+}
+
+#msg-erro-modelagem {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 600;
+	display: none;
+}

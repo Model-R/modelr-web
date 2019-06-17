@@ -1,0 +1,6 @@
+.files-options > div{
+    display: flex;
+    width: auto !important;
+    justify-content: space-evenly;
+    align-items: center;
+}

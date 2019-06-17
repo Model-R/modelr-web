@@ -1,0 +1,40 @@
+.modal-footer{
+    justify-content: center !important;
+}
+.modal-footer a:hover {
+	cursor: pointer;
+}
+
+.btn {
+    cursor: pointer !important;
+}
+
+.btn-primary{
+    background-color: #142914 !important;
+    border-color: #555555 !important;
+}
+
+.btn-primary:hover{
+    background-color: #319a6e !important;
+}
+
+#custom_notifications{
+    margin-top: -20px;
+}
+
+.ui-pnotify{
+    position: absolute;
+    top: 80px !important;
+    right: 20px !important;
+}
+
+.background-image {
+    opacity: 0.4;
+    background-image: url(../img/rsz_1fundo-jb.jpg);
+    background-position: center;
+}
+
+
+.label-user, .input-user{
+    margin-right: 5px;
+}

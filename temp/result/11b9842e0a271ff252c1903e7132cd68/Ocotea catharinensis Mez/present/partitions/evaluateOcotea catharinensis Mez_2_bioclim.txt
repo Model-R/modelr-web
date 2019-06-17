@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Ocotea catharinensis Mez 2 BioClim" 0.16656667 0.16656667 -1e-04 -1e-04 0.16656667 0.16656667 0.532185628742515 0.0708582834331337 "BioClim" 2

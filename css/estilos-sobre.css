@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    min-height: 100%;
+}
+
+#sobre {
+    overflow: auto;
+    padding-bottom: 100px;
+    height: 2000px;
+}
+
+footer {
+    position: relative;
+    height: 60px;
+    margin-top: -60px;
+    clear: both;
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px 20px;
+    height: auto;
+}
+
+#sobre h2 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+
+#sobre p {
+    text-align: justify;
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+MEDIA QUERIES
+*/
+
+@media screen and (min-width: 768px) {
+    
+    /*
+    SOBRE
+    */
+    
+    #sobre {
+        min-height: 250px;
+        text-align: justify;
+    }
+
+}
+
+
+@media screen and (min-width: 1600px) {
+    
+    #sobre{
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    
+}

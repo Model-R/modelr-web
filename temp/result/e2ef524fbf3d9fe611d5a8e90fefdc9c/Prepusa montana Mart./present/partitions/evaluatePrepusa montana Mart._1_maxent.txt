@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Prepusa montana Mart. 1 maxent" 0.83830549 0.83830549 0.83830549 0.63796903 0.83830549 0.85487725 0.833333333333333 0.833333333333333 "maxent" 1

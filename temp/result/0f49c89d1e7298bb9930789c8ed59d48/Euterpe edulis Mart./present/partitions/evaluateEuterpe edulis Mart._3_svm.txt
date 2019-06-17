@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Euterpe edulis Mart. 3 svm" 0.01242767 0.00673711 0.00674281 0.01471774 0.00830107 0.0067615 0.694294294294294 0.396396396396396 "svm" 3

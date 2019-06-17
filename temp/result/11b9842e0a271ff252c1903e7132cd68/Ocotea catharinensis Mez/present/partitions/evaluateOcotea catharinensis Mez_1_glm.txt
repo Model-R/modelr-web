@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Ocotea catharinensis Mez 1 glm" 0.02214168 0.02214168 0.0109286 0.01766211 0.02214168 0.01103261 0.764970059880239 0.587824351297405 "glm" 1

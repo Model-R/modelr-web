@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Euterpe edulis Mart. 2 BioClim" 0.3999 0.1999 0.1999 -1e-04 0.1999 0.2999 0.908982035928144 0.721556886227545 "BioClim" 2

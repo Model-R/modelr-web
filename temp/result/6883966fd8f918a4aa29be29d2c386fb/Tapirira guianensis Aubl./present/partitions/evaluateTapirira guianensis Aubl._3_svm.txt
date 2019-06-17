@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Tapirira guianensis Aubl. 3 svm" 0.02271789 0.01857531 -0.00077045 0.04111917 0.01585857 0.01076156 0.722447143499775 0.39136302294197 "svm" 3

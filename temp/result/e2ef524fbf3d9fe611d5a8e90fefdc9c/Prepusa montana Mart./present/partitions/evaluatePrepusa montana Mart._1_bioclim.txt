@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Prepusa montana Mart. 1 BioClim" -1e-04 -1e-04 -1e-04 -1e-04 0.16656667 0.16656667 0.333333333333333 0 "BioClim" 1

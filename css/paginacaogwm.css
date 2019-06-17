@@ -1,0 +1,47 @@
+/* CSS Document */
+
+.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+color: #999;
+cursor: not-allowed;
+background-color: #fff;
+border-color: #ddd;
+}
+.pagination>li>a:hover, .pagination>li>span:hover, .pagination>li>a:focus, .pagination>li>span:focus {
+background-color: #eee;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+margin-left: 0;
+border-bottom-left-radius: 4px;
+border-top-left-radius: 4px;
+}
+.pagination>.disabled>span, .pagination>.disabled>span:hover, .pagination>.disabled>span:focus, .pagination>.disabled>a, .pagination>.disabled>a:hover, .pagination>.disabled>a:focus {
+color: #999;
+cursor: not-allowed;
+background-color: #fff;
+border-color: #ddd;
+}
+.pagination>li>a, .pagination>li>span {
+position: relative;
+float: left;
+padding: 6px 12px;
+margin-left: -1px;
+line-height: 1.428571429;
+text-decoration: none;
+background-color: #fff;
+border: 1px solid #ddd;
+}
+
+label.valid {
+  width: 24px;
+  height: 24px;
+  background: url(assets/img/valid.png) center center no-repeat;
+  display: inline-block;
+  text-indent: -9999px;
+}
+label.error {
+  font-weight: bold;
+  color: red;
+  padding: 2px 8px;
+  margin-top: 2px;
+}
+

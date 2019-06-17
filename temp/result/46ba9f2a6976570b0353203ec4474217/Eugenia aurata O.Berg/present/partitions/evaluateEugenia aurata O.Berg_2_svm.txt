@@ -1,0 +1,2 @@
+"kappa" "spec_sens" "no_omission" "prevalence" "equal_sens_spec" "sensitivity" "AUC" "TSS" "algoritmo" "partition"
+"Eugenia aurata O.Berg 2 svm" 0.01592161 0.0137503 0.01023355 0.0179227 0.01362834 0.01031895 0.779614325068871 0.518595041322314 "svm" 2
