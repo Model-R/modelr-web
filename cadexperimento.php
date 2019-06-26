@@ -104,7 +104,18 @@ $nome_experimeto = $Experimento->name;
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script> 
    <script src = "leaflet/leaflet.editable.js"></script>
-   <script src = "leaflet/functions.js"></script>
+   <script src = "leaflet/Functions.js"></script>
+
+   <!-- ------------- RASTER -------------->
+    <!-- CDN references -->
+    <!-- <script src="//npmcdn.com/leaflet@1.2.0/dist/leaflet.js"></script> -->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/chroma-js/1.3.4/chroma.min.js"></script>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="//npmcdn.com/geotiff@0.3.6/dist/geotiff.js"></script>
+
+    <!-- Plugin -->
+    <script src="https://ihcantabria.github.io/Leaflet.CanvasLayer.Field/dist/leaflet.canvaslayer.field.js"></script>
 
 </head>
 <script>

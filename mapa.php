@@ -226,11 +226,11 @@ function initMapExpResultado() {
     imageBounds = [[<?php echo $projection[3]?>, <?php echo $projection[1]?>],
                    [<?php echo $projection[2]?>, <?php echo $projection[0]?>]];
 
-    if(isImageCut){
-        imageOverlay = addImage (mapResult, imageBounds, pngCutPath)
-    } else {
-        imageOverlay = addImage (mapResult, imageBounds, rasterPngPath)
-    }
+    // if(isImageCut){
+    //     imageOverlay = addImage (mapResult, imageBounds, pngCutPath)
+    // } else {
+    //     imageOverlay = addImage (mapResult, imageBounds, rasterPngPath)
+    // }
     mapresult = mapResult;
     printMarkers(mapResult);
 }
@@ -322,8 +322,6 @@ function cortarRaster(){
 		}
     }
     let PolygonArrayString = extractPolygonsVertices(mapresult);
-    console.log(PolygonArrayString)
-    console.log('cutGeoJson.php?table=polygon&array=[' + PolygonArrayString.join(':') + ']&expid=' + <?php echo $id;?>)
     xmlhttp.open("GET",'cutGeoJson.php?table=polygon&array=[' + PolygonArrayString.join(':') + ']&expid=' + <?php echo $id;?>,true);
 	xmlhttp.send();
 } 
