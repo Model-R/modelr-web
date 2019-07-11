@@ -56,7 +56,18 @@ extracted_urls = c(
     "http://ipt.jbrj.gov.br/reflora/resource?r=unop",
     "http://ipt.jbrj.gov.br/reflora/resource?r=us_reflora",
     "http://ipt.jbrj.gov.br/reflora/resource?r=vies_herbarium",
-    "http://ipt.jbrj.gov.br/reflora/resource?r=w_reflora"
+    "http://ipt.jbrj.gov.br/reflora/resource?r=w_reflora",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=cgms",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=hcf",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=hj_herb",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=hstm",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=huem",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=huemg",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=hvasf",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=mufal",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=pmsp",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=rbr",
+    "http://ipt.jbrj.gov.br/reflora/resource?r=real"
 )
 
 extracted_urls = str_replace(extracted_urls, "resource", "archive.do");

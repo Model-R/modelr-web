@@ -29,7 +29,7 @@ if(bufferValue == 'NULL') bufferValue = NULL;
 algorithms
 #extensionPath <- paste0('../../../../../../','mnt/dados/modelr/json/polygon-317.json')
 
-if(getwd() == "/var/www/html/rafael/modelr/v2" || getwd() == "/var/www/html/rafael/modelr/v3"){
+if(getwd() != "/var/www/html/rafael/modelr"){
 	cat('v2')
 	baseUrl <- '../'
 } else {

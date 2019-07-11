@@ -36,10 +36,12 @@ $rasterPngPath = $Experimento->rasterPngPath;
 $rasterPngPath = str_replace("/var/www/html/rafael/modelr","https://model-r.jbrj.gov.br",$rasterPngPath);        
 $novoRaster;
 
-if(dirname(__FILE__) == '/var/www/html/rafael/modelr/v2' || dirname(__FILE__) == '/var/www/html/rafael/modelr/v3'){
+if(dirname(__FILE__) !== '/var/www/html/rafael/modelr'){
 	$imageModelFolder = "../temp/result/" . $hash;
+	$baseUrl = '../';
 } else {
 	$imageModelFolder = "temp/result/" . $hash;
+	$baseUrl = './';
 }
 ?>
 <head>
@@ -183,7 +185,7 @@ while ($row = pg_fetch_array($res))
 function downloadZip(tipo){
 	document.getElementById('frmmodelos').target="_blank";
 	document.getElementById('frmmodelos').method="POST";
-	document.getElementById('frmmodelos').action='downloadZip.php?arquivo=<?php echo $id;?>';
+	document.getElementById('frmmodelos').action='<?php echo $baseUrl;?>downloadZip.php?arquivo=<?php echo $id;?>';
 	document.getElementById('frmmodelos').submit();
 }
 

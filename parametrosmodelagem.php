@@ -292,7 +292,10 @@ if (empty($resolution))
 	<ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
 	</ul>
 	<div class="clearfix"></div>
-	<div id="notif-group" class="tabbed_notifications"></div>
+	
+
+
+
 </div>
 
 
