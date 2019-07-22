@@ -701,7 +701,7 @@ function printCSV(lines){
 	for (i = 0; i < csv_headers.length; i++) {
 		if(csv_headers[i] == 'sp') spindex = i;
 		else if(csv_headers[i] == 'lat') latindex = i;
-		else if(csv_headers[i] == 'lon') longindex = i;
+		else if(csv_headers[i] == 'long') longindex = i;
 		else if(csv_headers[i] == 'estado') estadoindex = i;
 		else if(csv_headers[i] == 'municipio') municipioindex = i;
 		else if(csv_headers[i] == 'coletor') coletorindex = i;

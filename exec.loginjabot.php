@@ -39,7 +39,7 @@ if(!empty($_REQUEST['login'])){
 		   }
 	   }
 	   
-		   $_SESSION['s_idusuario']=$Usuario->iduser;
+		$_SESSION['s_idusuario']=$Usuario->iduser;
 		$_SESSION['s_nome']=$Usuario->name;
 		$_SESSION['s_email']=$Usuario->email;
 		$_SESSION['ID_SESSION']=session_id();

@@ -28,7 +28,6 @@ var stab = <?php
 		echo 0;
 	}
 ?>;
-console.log('tab mapa ' + stab);
 if(stab == 8){
 	document.getElementById('tab8').checked = true;
 	document.getElementById('tab_content8').classList.add("in");
@@ -36,7 +35,6 @@ if(stab == 8){
 }
 
 $("label").click(function(){
-    console.log($(this).attr('for'))
 	var tab = $(this).attr('for');
 	if(tab == 'tab8'){
 		document.getElementById('tab_content8').classList.add("in");
