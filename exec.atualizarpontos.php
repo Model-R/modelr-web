@@ -272,7 +272,7 @@ if($idstatus == '4' || $idstatus == '17'){
 	$file = fopen($ocorrenciasCSVPath, 'w');
 	fputcsv($file, array("taxon","lon","lat"), ";");
 	
-	$ws = file_get_contents("https://model-r.jbrj.gov.br/ws/?id=" . $idexperimento);
+	$ws = file_get_contents("https://model-r.jbrj.gov.br/modelr-web/ws/?id=" . $idexperimento);
 	$json = json_decode($ws);
 
 	$occurrenceList = $json[0]->occurrences;
@@ -280,7 +280,12 @@ if($idstatus == '4' || $idstatus == '17'){
 	foreach($occurrenceList as $occurrence){
 		$item = [];
 		if($occurrence->idstatusoccurrence == 4 || $occurrence->idstatusoccurrence == 17){
-			array_push($item,$occurrence->taxon,$occurrence->lon,$occurrence->lat);
+			if($occurrence->lat_ajustada != "") $lat = $occurrence->lat_ajustada;
+			else $lat = $occurrence->lat;
+
+			if($occurrence->lon_ajustada != "") $lon = $occurrence->lon_ajustada;
+			else $lon = $occurrence->lon;
+			array_push($item,$occurrence->taxon,$lon,$lat);
 			fputcsv($file, $item, ";");
 			$count = $count + 1;
 		}

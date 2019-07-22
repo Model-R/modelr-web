@@ -46,11 +46,11 @@ while ($row = pg_fetch_array($res))
 		$c2++;
 		if ($c2<$qtd2)
 		{	
-			$json_str2.='{"taxon":"'.$row2['taxon'].'", "lat":"'.$row2['lat'].'", "lon": "'.$row2['long'].'", "idstatusoccurrence": "'.$row2['idstatusoccurrence'].'"},';
+			$json_str2.='{"taxon":"'.$row2['taxon'].'", "lat":"'.$row2['lat'].'", "lon": "'.$row2['long'].'", "lat_ajustada": "'.$row2['lat2'].'", "lon_ajustada": "'.$row2['long2'].'", "idstatusoccurrence": "'.$row2['idstatusoccurrence'].'"},';
 		}
 		else
 		{
-				$json_str2.='{"taxon":"'.$row2['taxon'].'", "lat":"'.$row2['lat'].'", "lon": "'.$row2['long'].'", "idstatusoccurrence": "'.$row2['idstatusoccurrence'].'"}';
+			$json_str2.='{"taxon":"'.$row2['taxon'].'", "lat":"'.$row2['lat'].'", "lon": "'.$row2['long'].'", "lat_ajustada": "'.$row2['lat2'].'", "lon_ajustada": "'.$row2['long2'].'", "idstatusoccurrence": "'.$row2['idstatusoccurrence'].'"}';
 		}
 		
 	}
