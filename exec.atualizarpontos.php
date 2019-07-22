@@ -131,6 +131,7 @@ where
 contains(GeomFromEWKT(shape.geom),GeomFromEWKT('SRID=4326;POINT(' || o.long || ' ' || o.lat || ')' )) 
 and (shape.nm_uf <> majorarea
 or shape.nm_mun <> minorarea)
+and majorarea <> '' and minorarea <> ''
 )";
 //shape.pais <> country
 		$res = pg_exec($conn,$sql);

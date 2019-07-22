@@ -217,51 +217,6 @@ if ($op=='A')
         if ((!empty($especie)) && ($_REQUEST['fontebiotico'][0]=='1'))
         {
 			$ws = file_get_contents("https://model-r.jbrj.gov.br/execjabot.php?especie=" . $especie);
-            /*$sql = "select numtombo,taxoncompleto,codtestemunho,coletor,numcoleta,latitude,longitude,
-            pais,estado_prov as estado,cidade as municipio, siglacolecao as herbario
-                from  
-            publicacao.extracao_jabot where latitude is not null and longitude is not null and
-            familia || ' ' || taxoncompleto ilike '%".$especie."%'";
-            $res = pg_exec($conn,$sql);
-            $totalregistroselecionados = pg_num_rows($res);
-        ?>
-                                                                                    <tbody>
-
-            <thead>
-                <tr class="headings">
-                    <th>
-                        <input type="checkbox" id="chkboxtodos2" name="chkboxtodos2" onclick="selecionaTodos2(true);">
-                    </th>
-                    <th class="column-title">T�xon </th>
-                    <th class="column-title">Tombo </th>
-                    <th class="column-title">Herb�rio </th>
-                    <th class="column-title">Coletor </th>
-                    <th class="column-title">Coordenadas </th>
-                    <th class="column-title">Localiza��o</th>
-                </tr>
-            </thead>
-        <?php while ($row = pg_fetch_array($res))
-            {
-            $codigobarras= str_pad($row['codtestemunho'], 8, "0", STR_PAD_LEFT);	
-            $sqlimagem = "select * from jabot.imagem where codigobarras = '".$codigobarras."' limit 1";
-            $resimagem = pg_exec($conn,$sqlimagem);
-            $rowimagem = pg_fetch_array($resimagem);
-            $servidor = $rowimagem ['servidor'];
-            $path =  $rowimagem ['path'];
-            $arquivo =  $rowimagem ['arquivo'];
-            $html_imagem='<a href=templaterb2.php?colbot=rb&codtestemunho='.$row['codtestemunho'].'&arquivo='.$arquivo.' target=\'Visualizador\'><img src="http://'.$servidor.'/fsi/server?type=image&source='.$path.'/'.$arquivo.'&width=300&height=100&profile=jpeg&quality=20"></a>';
-            ?>
-                <tr class="even pointer">
-                    <td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="<?php echo $row['codtestemunho'];?>" type="checkbox" ></td>
-                    <td class=" "><?php echo $html_imagem.' ';?><?php echo $row['taxoncompleto'];?></td>
-                    <td class="a-right a-right "><?php echo $row['numtombo'];?></td>
-                    <td class=" "><?php echo $row['herbario'];?></td>
-                    <td class="a-right a-right "><?php echo $row['coletor'];?> <?php echo $row['numcoleta'];?></td>
-                    <td class=" "><?php echo $row['latitude'];?>, <?php echo $row['longitude'];?></td>
-                    <td class=" "><?php echo $row['pais'];?>, <?php echo $row['estado'];?> - <?php echo $row['municipio'];?></td>
-                </tr>
-        <?php 
-            }*/ 
         } // if ((!empty($especie)) && ($_REQUEST['fontebiotico'][0]=='JABOT'))
 	?>
 
@@ -622,7 +577,6 @@ async function printData(gbifData, jabotData, HVdata = [])
 
 function getAllGbif (taxonKey, offset, results, jabotData) {
 	
-	console.log('entrou gel all gbif ' + offset)
 	if(taxonKey == null){
 		document.getElementById('erro-busca').style.display = 'block';
 		exibe('loading','Buscando Ocorrências');
@@ -784,13 +738,10 @@ function showInstructions() {
 }
 
 $(document).ready(function(){
-    //console.log(document.getElementById('checkfontegbif').checked==true)
-	//console.log(document.getElementById('checkfontejabot').checked==true)
     if(document.getElementById('checkfontejabot').checked==true || document.getElementById('checkfontegbif').checked==true){
         var especie = document.getElementById('edtespecie').value;
 		getTaxonKeyGbif(especie);
     }
-    //console.log('document ready');
 });
 
 async function buscar()
@@ -927,11 +878,6 @@ function printHV (data) {
 	table += '</th></tr></thead>';
 	table += '<tbody><td class="a-center total-busca" colspan=8>Total:' + (contador)  + '</td>'+body+'</tbody></table>';
 	table += '';
-		
-//			x += '('+myObj.results[i]['decimalLongitude'] + ', '+myObj.results[i]['decimalLongitude']+ ')';
-//		}
-
-//		decimalLongitude":-41.336139,"decimalLatitude
 	
 	document.getElementById("div_resultadobusca").innerHTML = table;
 }
