@@ -571,7 +571,7 @@ async function printData(gbifData, jabotData, HVdata = [])
 
 				//if (longitude == 'NA' || latitude == 'NA') continue;
 
-				taxon = HVdata[i].genus + ' ' + HVdata[i].specificEpithet;
+				taxon = especie;
 				tombo = HVdata[i].catalogNumber;
 				coletor = HVdata[i].recordedBy;
 				numcoleta = HVdata[i].recordNumber;
@@ -868,6 +868,7 @@ function getHV(sp)
 		xmlhttp.onreadystatechange=function()  {
 			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 				var data = xmlhttp.response;
+				console.log(data)
 				resolve(JSON.parse(data));
 			}
 		}

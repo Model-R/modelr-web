@@ -10,7 +10,7 @@ args <- commandArgs(TRUE)
 id <- args[1]
 rasterCSVPath <- args[2]
 
-if(getwd() == "/var/www/html/rafael/modelr/v2" || getwd() == "/var/www/html/rafael/modelr/v3"){
+if(getwd() != "/var/www/html/rafael/modelr"){
 	baseUrl <- '../'
 } else {
 	baseUrl <- ''

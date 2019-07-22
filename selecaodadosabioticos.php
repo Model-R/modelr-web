@@ -45,7 +45,7 @@ if (empty($resolution))
     $resolution = '10';
 }
 
-if(dirname(__FILE__) == '/var/www/html/rafael/modelr/v2' || dirname(__FILE__) == '/var/www/html/rafael/modelr/v3'){
+if(dirname(__FILE__) !== '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
 } else {
 	$baseUrl = '';
@@ -197,7 +197,6 @@ if(dirname(__FILE__) == '/var/www/html/rafael/modelr/v2' || dirname(__FILE__) ==
 				</div>
 			</div>
 	</div>
-	
 	<?php if (file_exists($baseUrl . 'temp/' . $id . '/correlation-' . $id . '.png')) { ?>
 		<div class="col-md-6 col-sm-6 col-xs-12" style="text-align: center;">
 			<img src="<?php echo $baseUrl;?>temp/<?php echo $id;?>/correlation-<?php echo $id;?>.png?<?php echo rand();?>">

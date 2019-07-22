@@ -41,7 +41,7 @@ foreach ($rasterBio as &$value) {
 $ws = file_get_contents("https://model-r.jbrj.gov.br/ws/?id=" . $id);
 $json = json_decode($ws); 
 
-if(dirname(__FILE__) == '/var/www/html/rafael/modelr/v2' || dirname(__FILE__) == '/var/www/html/rafael/modelr/v3'){
+if(dirname(__FILE__) !== '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
 } else {
 	$baseUrl = '';

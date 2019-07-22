@@ -20,15 +20,15 @@ folder_path = paste0(baseUrl, "../modelr-data/ipt/reflora/searches/")
 read_ocurrence_list <- readRDS(paste0(source_folder, "ocurrences_list.Rds"))
 filtered_ocurrences_list = list();
 i = 1;
-read_ocurrence_list[[1]][1,]
+total = 0;
 for(list in read_ocurrence_list){
+  list$recordNumber <- as.character(list$recordNumber) 
   filtered_ocurrences_list[[i]] = subset(list, str_detect(scientificName, regex(sp, ignore_case = T)))
+  total = total + nrow(filtered_ocurrences_list[[i]])
   i = i + 1
 }
-  
-  
-nrow(filtered_ocurrences_list[[1]])
-nrow(filtered_ocurrences_list[[2]]) 
+
+total
 compiled_ocurrence_list = bind_rows(filtered_ocurrences_list)
 write.csv(compiled_ocurrence_list, 
             file = paste0(folder_path, sp, "_ocurrence_list-exp", experiment_id, ".csv"), 
