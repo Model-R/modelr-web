@@ -23,8 +23,6 @@ if(dirname(__FILE__) != '/var/www/html/rafael/modelr'){
 	$baseUrl = '';
 }
 
-print_r($_REQUEST);
-//exit;
 if(empty($_REQUEST['mult'])){ 
 	$mult = false;
 }

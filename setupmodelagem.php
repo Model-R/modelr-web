@@ -303,7 +303,7 @@ $algString = implode(";",$arrayAlg);
 // } else {
 	// echo "Rscript script_exemplo_modelr.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'";
 	// exit;
-	exec("Rscript script_exemplo_modelr.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'");
+	exec("Rscript script_exemplo_modelr.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' &");
 	if (!file_exists($baseUrl . "temp/result/" . $hashId . "/" . $speciesName . ".csv")) {
 		header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=77&id=" . $id);
 	} else {
