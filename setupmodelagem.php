@@ -301,9 +301,9 @@ $algString = implode(";",$arrayAlg);
 // if($returnData[0] < 10){
 	// header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=76&id=" . $id);
 // } else {
-	// echo "Rscript script_exemplo_modelr.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'";
+	// echo "Rscript script_modelagem.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'";
 	// exit;
-	exec("Rscript script_exemplo_modelr.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' &");
+	exec("Rscript script_modelagem.R $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' &");
 	if (!file_exists($baseUrl . "temp/result/" . $hashId . "/" . $speciesName . ".csv")) {
 		header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=77&id=" . $id);
 	} else {

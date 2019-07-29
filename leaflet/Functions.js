@@ -10,12 +10,6 @@ function startMap (id, center, zoom){
         accessToken: ACCESS_TOKEN
     }).addTo(mymap);
     
-    d3.text('../BioClim_bin_Abarema langsdorffii (Benth.) Barneby & J.W.Grimes_1.tif', function (asc) {
-    var s = L.ScalarField.fromGeoTIFF(asc);
-    var layer = L.canvasLayer.scalarField(s).addTo(mymap);
-
-    mymap.fitBounds(layer.getBounds());
-});
 // console.log('before')
 //     var layer = L.leafletGeotiff('https://model-r.jbrj.gov.br/BioClim_bin_Abarema langsdorffii (Benth.) Barneby & J.W.Grimes_1.tif').addTo(mymap);
 // console.log('after')
@@ -124,6 +118,9 @@ function extractPolygonsVertices (map) {
 }
 
 function addImage (map, bounds, url) {
+    var corner1 = L.latLng(bounds[0][0], bounds[0][1]),
+    corner2 = L.latLng(bounds[1][0],bounds[1][1]),
+    bounds = L.latLngBounds(corner1, corner2);
     return L.imageOverlay(url, bounds).addTo(map);
 }
 

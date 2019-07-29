@@ -223,6 +223,7 @@ function initMapExpResultado() {
 	//-64.67653000000001;-30.924622499999998;6.404925371814875;-32.03960046758004
     //projection
 
+    console.log('projeção: '+<?php echo $projection[0]?>);
     imageBounds = [[<?php echo $projection[3]?>, <?php echo $projection[1]?>],
                    [<?php echo $projection[2]?>, <?php echo $projection[0]?>]];
 
