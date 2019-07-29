@@ -36,8 +36,8 @@
 			<input id="tab12" type="radio" name="tabs" class="input-tab">
 			<label class="tab-label" for="tab12"><span>Extensão</span></label>
 			
-			<input id="tab18" type="radio" name="tabs" class="input-tab">
-			<label class="tab-label" for="tab18"><span>Projeção</span></label>
+			<!-- <input id="tab18" type="radio" name="tabs" class="input-tab">
+			<label class="tab-label" for="tab18"><span>Projeção</span></label> -->
 			
 		</div>
 		
@@ -54,9 +54,9 @@
 			<div  class="tab-pane fade <?php if ($stab=='12') echo 'in active';?>" id="tab_content12" aria-labelledby="home-tab">
 				<?php require "expextensao.php";?>
 			</div>
-			<div  class="tab-pane fade <?php if ($stab=='18') echo 'in active';?>" id="tab_content18" aria-labelledby="home-tab">
-				<?php require "expprojecao.php";?>
-			</div>
+			<!-- <div  class="tab-pane fade <?php //if ($stab=='18') echo 'in active';?>" id="tab_content18" aria-labelledby="home-tab">
+				<?php //require "expprojecao.php";?>
+			</div> -->
 		</div>
 	</div>
 </div>
@@ -80,8 +80,8 @@ if(stab == 9){
 	document.getElementById('tab_content11').classList.remove("active");
 	document.getElementById('tab_content12').classList.remove("in");
 	document.getElementById('tab_content12').classList.remove("active");
-	document.getElementById('tab_content18').classList.remove("in");
-	document.getElementById('tab_content18').classList.remove("active");
+	// document.getElementById('tab_content18').classList.remove("in");
+	// document.getElementById('tab_content18').classList.remove("active");
 }
 else if(stab == 10){
 	document.getElementById('tab10').checked = true;
@@ -93,8 +93,8 @@ else if(stab == 10){
 	document.getElementById('tab_content11').classList.remove("active");
 	document.getElementById('tab_content12').classList.remove("in");
 	document.getElementById('tab_content12').classList.remove("active");
-	document.getElementById('tab_content18').classList.remove("in");
-	document.getElementById('tab_content18').classList.remove("active");
+	// document.getElementById('tab_content18').classList.remove("in");
+	// document.getElementById('tab_content18').classList.remove("active");
 	
 }
 else if(stab == 11){
@@ -107,8 +107,8 @@ else if(stab == 11){
 	document.getElementById('tab_content11').classList.add("active");
 	document.getElementById('tab_content12').classList.remove("in");
 	document.getElementById('tab_content12').classList.remove("active");
-	document.getElementById('tab_content18').classList.remove("in");
-	document.getElementById('tab_content18').classList.remove("active");
+	// document.getElementById('tab_content18').classList.remove("in");
+	// document.getElementById('tab_content18').classList.remove("active");
 }
 else if(stab == 12){
 	document.getElementById('tab12').checked = true;
@@ -120,8 +120,8 @@ else if(stab == 12){
 	document.getElementById('tab_content11').classList.remove("active");
 	document.getElementById('tab_content12').classList.add("in");
 	document.getElementById('tab_content12').classList.add("active");
-	document.getElementById('tab_content18').classList.remove("in");
-	document.getElementById('tab_content18').classList.remove("active");
+	// document.getElementById('tab_content18').classList.remove("in");
+	// document.getElementById('tab_content18').classList.remove("active");
 }
 else if(stab == 18){
 	document.getElementById('tab18').checked = true;
@@ -133,8 +133,8 @@ else if(stab == 18){
 	document.getElementById('tab_content11').classList.remove("active");
 	document.getElementById('tab_content12').classList.remove("in");
 	document.getElementById('tab_content12').classList.remove("active");
-	document.getElementById('tab_content18').classList.add("in");
-	document.getElementById('tab_content18').classList.add("active");
+	// document.getElementById('tab_content18').classList.add("in");
+	// document.getElementById('tab_content18').classList.add("active");
 }
 
 $("label").click(function(){
@@ -149,8 +149,8 @@ $("label").click(function(){
 		document.getElementById('tab_content11').classList.remove("active");
 		document.getElementById('tab_content12').classList.remove("in");
 		document.getElementById('tab_content12').classList.remove("active");
-		document.getElementById('tab_content18').classList.remove("in");
-		document.getElementById('tab_content18').classList.remove("active");
+		// document.getElementById('tab_content18').classList.remove("in");
+		// document.getElementById('tab_content18').classList.remove("active");
 	}
 	else if(tab == 'tab10'){
 		document.getElementById('tab_content9').classList.remove("in");
@@ -161,8 +161,8 @@ $("label").click(function(){
 		document.getElementById('tab_content11').classList.remove("active");
 		document.getElementById('tab_content12').classList.remove("in");
 		document.getElementById('tab_content12').classList.remove("active");
-		document.getElementById('tab_content18').classList.remove("in");
-		document.getElementById('tab_content18').classList.remove("active");
+		// document.getElementById('tab_content18').classList.remove("in");
+		// document.getElementById('tab_content18').classList.remove("active");
 	}
 	else if(tab == 'tab11'){
 		document.getElementById('tab_content9').classList.remove("in");
@@ -173,8 +173,8 @@ $("label").click(function(){
 		document.getElementById('tab_content11').classList.add("active");
 		document.getElementById('tab_content12').classList.remove("in");
 		document.getElementById('tab_content12').classList.remove("active");
-		document.getElementById('tab_content18').classList.remove("in");
-		document.getElementById('tab_content18').classList.remove("active");
+		// document.getElementById('tab_content18').classList.remove("in");
+		// document.getElementById('tab_content18').classList.remove("active");
 	}
 	else if(tab == 'tab12'){
 		document.getElementById('tab_content9').classList.remove("in");
@@ -185,8 +185,8 @@ $("label").click(function(){
 		document.getElementById('tab_content11').classList.remove("active");
 		document.getElementById('tab_content12').classList.add("in");
 		document.getElementById('tab_content12').classList.add("active");
-		document.getElementById('tab_content18').classList.remove("in");
-		document.getElementById('tab_content18').classList.remove("active");
+		// document.getElementById('tab_content18').classList.remove("in");
+		// document.getElementById('tab_content18').classList.remove("active");
 	}
 	else if(tab == 'tab18'){
 		document.getElementById('tab_content9').classList.remove("in");
@@ -197,8 +197,8 @@ $("label").click(function(){
 		document.getElementById('tab_content11').classList.remove("active");
 		document.getElementById('tab_content12').classList.remove("in");
 		document.getElementById('tab_content12').classList.remove("active");
-		document.getElementById('tab_content18').classList.add("in");
-		document.getElementById('tab_content18').classList.add("active");
+		// document.getElementById('tab_content18').classList.add("in");
+		// document.getElementById('tab_content18').classList.add("active");
 	}
 });
 </script>

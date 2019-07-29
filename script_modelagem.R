@@ -117,6 +117,9 @@ for (especie in especies) {
         seed = 512,
         buffer_type = bufferValue,
         plot_sdmdata = T,
+        clean_dupl = T,
+        clean_uni = T,
+        clean_nas = T,
         n_back = as.numeric(num_points)
     )
 	

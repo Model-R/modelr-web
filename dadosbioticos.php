@@ -192,7 +192,7 @@ if ($op=='A')
 						<div class="item form-group">
 						<label class="control-label col-md-3 col-sm-3 col-xs-12" for="edtfiltroautomatico"></label>
 							<div class="col-md-6 col-sm-6 col-xs-12">
-								<input type="checkbox" name="edtfiltroautomatico" id="edtfiltroautomatico" checked>Executar filtros automaticamente<br>
+								<input type="checkbox" name="edtfiltroautomatico" id="edtfiltroautomatico">Executar filtros automaticamente<br>
 							</div>
 						</div>
 					</div>
