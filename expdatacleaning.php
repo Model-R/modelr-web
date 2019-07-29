@@ -127,7 +127,7 @@ if ($op=='A')
 				<div class="modal-footer">
 					<input type="hidden" name="edidocorrencia" id="edidocorrencia">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					<button type="button" class="btn btn-primary" onclick="atualizarPontos(document.getElementById('edidocorrencia').value,document.getElementById('cmboxstatusoccurrence').value,document.getElementById('edtlatitude').value,document.getElementById('edtlongitude').value, true)">Salvar</button>
+					<button type="button" class="btn btn-primary" onclick="atualizarPontos(document.getElementById('edidocorrencia').value,document.getElementById('cmboxstatusoccurrence').value,document.getElementById('edtlatitude').value,document.getElementById('edtlongitude').value, false)">Salvar</button>
 				</div>
 			</div>
 		</div>
