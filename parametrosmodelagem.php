@@ -243,7 +243,7 @@ if (empty($resolution))
 									<input <?php if ($Experimento->usaAlgoritmo($id,$row['idalgorithm'])) echo "checked";?> type="checkbox" name="algoritmo[]" id="checkalgoritmo<?php echo $row['idalgorithm'];?>" value="<?php echo $row['idalgorithm'];?>" data-parsley-mincheck="2" required class="flat" /> <?php echo $row['algorithm'];?>
 										<br />
 								 <?php } else { ?>
-									   <input <?php if ($Experimento->usaAlgoritmo($id,$row['idalgorithm'])) echo "checked";?> type="checkbox" name="algoritmo[]" id="checkalgoritmo<?php echo $row['idalgorithm'];?>" value="<?php echo $row['idalgorithm'];?>" data-parsley-mincheck="2" required class="flat" /> <?php echo $row['algorithm'];?>
+									<input <?php if ($Experimento->usaAlgoritmo($id,$row['idalgorithm'])) echo "checked";?> type="checkbox" name="algoritmo[]" id="checkalgoritmo<?php echo $row['idalgorithm'];?>" value="<?php echo $row['idalgorithm'];?>" data-parsley-mincheck="2" required class="flat" /> <?php echo $row['algorithm'];?>
 										<br />
 								 <?php } ?>
 								 

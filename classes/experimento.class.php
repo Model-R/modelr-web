@@ -203,15 +203,15 @@ class Experimento
 				return false;
 			}
 		}
-		else
-		{
-			if($idalgoritmos == 2 || $idalgoritmos == 5){
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
+		// else
+		// {
+		// 	if($idalgoritmos == 2 || $idalgoritmos == 5){
+		// 		return true;
+		// 	}
+		// 	else {
+		// 		return false;
+		// 	}
+		// }
 		
 	}
 
@@ -229,14 +229,15 @@ class Experimento
 			$res2 = pg_exec($this->conn,$sql2);
 			if (pg_num_rows($res2)>0){
 				return false;
-			} else {
-				if($idraster == 4 || $idraster == 5 || $idraster == 13 || $idraster == 14 || $idraster == 84 || $idraster == 85 || $idraster == 93 || $idraster == 94){
-					return true;
-				}
-				else {
-					return false;
-				}
-			}
+			} 
+			// else {
+			// 	if($idraster == 4 || $idraster == 5 || $idraster == 13 || $idraster == 14 || $idraster == 84 || $idraster == 85 || $idraster == 93 || $idraster == 94){
+			// 		return true;
+			// 	}
+			// 	else {
+			// 		return false;
+			// 	}
+			// }
 		}
 		
 	}	
@@ -448,8 +449,8 @@ class Experimento
 			$res = pg_exec($this->conn,$sql);
 			$row = pg_fetch_array($res);
 
-			$this->incluirAlgoritmo($row[0],2);
-			$this->incluirAlgoritmo($row[0],5);
+			// $this->incluirAlgoritmo($row[0],2);
+			// $this->incluirAlgoritmo($row[0],5);
 
 			return $row[0];
 	   	}

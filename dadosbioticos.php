@@ -635,8 +635,8 @@ function handleFileSelect(evt) {
 		document.getElementById("checkfontecsv").checked = true;
 		document.getElementById("filename").innerHTML = f.name;
 		document.getElementById("csv-separator").style.display = 'flex';
-		console.log('inside get file')
-		console.log(arr)
+		// console.log('inside get file')
+		// console.log(arr)
 		file = arr;
         };
       })(f);
@@ -746,13 +746,20 @@ $(document).ready(function(){
 
 async function buscar()
 {
-	 exibe('loading','Buscando Ocorrências');
 	 if (document.getElementById('edtespecie').value=='' && document.getElementById('checkfontecsv').checked==false)// && document.getElementById('checkfontecsv').checked==false)
 	 {
 	 	criarNotificacao('Atenção','Informe o nome da espécie','warning')
 	 }
+	 else if (document.getElementById('checkfontejabot').checked==false && 
+			document.getElementById('checkfontegbif').checked==false && 
+			document.getElementById('checkfontesibbr').checked==false &&
+			document.getElementById('checkfontehv').checked==false &&
+			document.getElementById('checkfontecsv').checked==false) {
+			criarNotificacao('Atenção','Selecione pelo menos uma fonte de dados.','warning')
+	 }
 	 else
 	 {   
+		exibe('loading','Buscando Ocorrências');
 	 	var texto = document.getElementById('edtespecie').value;
 	 	var palavra = texto.split(' ');
 		
