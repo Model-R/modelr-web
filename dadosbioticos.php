@@ -653,24 +653,14 @@ function printCSV(lines){
 	spindex = latindex = longindex = estadoindex = municipioindex = coletorindex = numcoletaindex = -1;
 	var csv_headers = lines[0].split(separator);
 	for (i = 0; i < csv_headers.length; i++) {
-		console.log(csv_headers[i])
-		console.log('teste ' + csv_headers[i] == 'long')
-		console.log(csv_headers[i])
-		console.log('long')
-		console.log('--------------------------')
 		if(csv_headers[i] == 'sp') spindex = i;
-		else if(csv_headers[i].toLowerCase() === 'lat') latindex = i;
-		else if(csv_headers[i].toLowerCase() === 'long') longindex = i;
-		else if(csv_headers[i].toLowerCase() === 'estado') estadoindex = i;
-		else if(csv_headers[i].toLowerCase() === 'municipio') municipioindex = i;
-		else if(csv_headers[i].toLowerCase() === 'coletor') coletorindex = i;
-		else if(csv_headers[i].toLowerCase() === 'num_coleta') numcoletaindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'lat') latindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'long') longindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'estado') estadoindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'municipio') municipioindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'coletor') coletorindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'num_coleta') numcoletaindex = i;
 	}
-	console.log(csv_headers)
-	console.log(csv_headers)
-	console.log(spindex)
-	console.log(latindex)
-	console.log(longindex)
 	
 	if(spindex == -1 || latindex == -1 || longindex == -1){
 		criarNotificacao('Atenção','Os campos sp, lat e long do csv são obrigatórios','warning');
