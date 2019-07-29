@@ -400,12 +400,16 @@ class Experimento
 		
 	}
 	
-	function limparDados($idexperimento)
+	function limparDados($idexperimento, $filtro)
 	{
 		
- 		$sql = "
-		update modelr.experiment set idstatusexperiment = 1 where idexperiment = ".$idexperimento.";
-		delete from modelr.occurrence where idexperiment = ".$idexperimento;
+		if(empty($filtro)){
+			$sql = "update modelr.experiment set idstatusexperiment = 1 where idexperiment = ".$idexperimento.";
+			delete from modelr.occurrence where idexperiment = ".$idexperimento;
+		} else {
+			$sql = "delete from modelr.occurrence where idexperiment = ".$idexperimento . "and idstatusoccurrence=" . $filtro;
+		}
+ 	
 		$resultado = pg_exec($this->conn,$sql);
 		if ($resultado)
 		{

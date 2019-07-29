@@ -593,7 +593,11 @@ function confirmarLimparDados()
 	$('#ConfirmCleanModalDataCleaning').modal('show');
 }
 $("#cleanButtonDataCleaning").click(function() {
-	document.getElementById('frm').action='exec.experimento.php?id='+<?php echo $id; ?>+'&op=LDDC';
+	<?php if(empty($filtro)){?>
+		document.getElementById('frm').action='exec.experimento.php?id='+<?php echo $id; ?>+'&op=LDDC';
+	<?php } else { ?>
+		document.getElementById('frm').action='exec.experimento.php?id='+<?php echo $id; ?>+'&op=LDDC&filtro='+<?php echo $filtro;?>;
+	<?php } ?>
 	document.getElementById('frm').submit();
 });
 

@@ -13,6 +13,7 @@ $Experimento->conn = $conn;
 
 $operacao = $_REQUEST['op'];
 $page = $_REQUEST['page'];
+$filtro = $_REQUEST['filtro'];
 
 if($page == 'dc'){
 	$operacao = $_GET['op'];
@@ -77,7 +78,7 @@ if ($operacao=='A')
 
 if ($operacao=='LDDC')
 {
-   if ($result = $Experimento->limparDados($idexperimento))
+   if ($result = $Experimento->limparDados($idexperimento, $filtro))
 	{
 	 header("Location: cadexperimento.php?MSGCODIGO=19&op=A&tab=10&id=$idexperimento");
 	}
