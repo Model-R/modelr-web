@@ -36,6 +36,7 @@ $repetitions= $Experimento->repetitions;
 $trainpercent= $Experimento->trainpercent;
 $numpontos = $Experimento->num_points;
 $tss = $Experimento->tss;
+$threshBin = $Experimento->threshold_bin;
 $extent_model = $Experimento->extent_model;
 $liberado = false;
 
@@ -56,6 +57,10 @@ if (empty($numpontos))
 if (empty($tss))
 {
     $tss = 0.6;
+}
+if (empty($threshBin))
+{
+    $threshBin = 0.5;
 }
 if (empty($buffer))
 {
@@ -194,6 +199,16 @@ if (empty($resolution))
 								</div>
 								<div class="col-md-2 col-sm-2 col-xs-2">
 									<input id="lbltss" onchange="document.getElementById('edttss').value= this.value " value="<?php echo $tss;?>"  name="lbltss" class="form-control col-md-2 col-xs-12" data-toggle="tooltip" data-placement="top" title="Valor decimal entre 0 e 1 (exemplo: 0.3)">
+								</div>
+							</div>
+							<div class="item form-group" id="bin_threshold_item">
+								<label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Nível de Consenso<span class="required">*</span>
+								</label>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<input onchange="document.getElementById('lblbin').value=this.value" id="edtbin" value="<?php echo $threshBin;?>" type="range" min='0' max='1' step='0.1' name="edtbin" class="form-control col-md-3 col-xs-5" required="required">
+								</div>
+								<div class="col-md-2 col-sm-2 col-xs-2">
+									<input id="lblbin" onchange="document.getElementById('edtbin').value= this.value " value="<?php echo $threshBin;?>"  name="lblbin" class="form-control col-md-2 col-xs-12" data-toggle="tooltip" data-placement="top" title="Valor decimal entre 0 e 1 (exemplo: 0.3)">
 								</div>
 							</div>
 							<div class="item form-group" id="buffer_item">
@@ -412,26 +427,26 @@ var tipopartionamento
 $("#cmboxtipoparticionamento").change(function(){
 	tipopartionamento = document.getElementById('cmboxtipoparticionamento').value;
 	if(tipopartionamento == 1){ //crossvalidation
-		console.log('crossvalidation')
+		//console.log('crossvalidation')
 		document.getElementById('num_partition_item').style.display = 'block';
 		document.getElementById('trainpercent_item').style.display = 'none';
 	}
 	else if (tipopartionamento == 2){ //bootstrap
-		console.log('bootstrap')
+		//console.log('bootstrap')
 		document.getElementById('num_partition_item').style.display = 'none';
 		document.getElementById('trainpercent_item').style.display = 'block';
 	}
 });
 
 tipopartionamento = <?php echo $idtipoparticionamento;?> + '';
-console.log(tipopartionamento)
+//console.log(tipopartionamento)
 if(tipopartionamento == 0 || tipopartionamento == 1){ //crossvalidation
-	console.log('crossvalidation')
+	//console.log('crossvalidation')
 	document.getElementById('num_partition_item').style.display = 'block';
 	document.getElementById('trainpercent_item').style.display = 'none';
 }
 else if (tipopartionamento == 2){ //bootstrap
-	console.log('bootstrap')
+	//console.log('bootstrap')
 	document.getElementById('num_partition_item').style.display = 'none';
 	document.getElementById('trainpercent_item').style.display = 'block';
 }

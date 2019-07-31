@@ -17,6 +17,8 @@ $idstatus = $_REQUEST['idstatus'];
 $latinf = $_REQUEST['latinf'];
 $longinf = $_REQUEST['longinf'];
 
+print_r($_REQUEST);
+
 if(dirname(__FILE__) != '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
 } else {
@@ -55,7 +57,7 @@ $lista = $idponto;
 
 $MSGCODIGO = 19;
 
-if (($latinf != 'undefined') && (!empty($latinf)))
+if (($latinf != 'undefined') && (!empty($latinf)) || ($longinf != 'undefined') && (!empty($longinf)))
 {
 	//$Experimento->excluirPonto($idexperimento,$idponto,$idstatus,$latinf,$longinf);
 	foreach($lista as $idponto){

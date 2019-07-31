@@ -17,6 +17,7 @@ class Experimento
 	var $extent_model;
 	var $extent_projection;
 	var $tss;
+	var $threshold_bin;
 	var $resolution;
 	var $repetitions;
 	var $trainpercent;
@@ -426,7 +427,7 @@ class Experimento
 	
 	function incluir()
 	{
- 		$sql = "insert into modelr.experiment (name,description,group_name,iduser,idstatusexperiment,type,idpartitiontype,num_partition,num_points,tss,buffer,resolution,repetitions,trainpercent
+ 		$sql = "insert into modelr.experiment (name,description,group_name,iduser,idstatusexperiment,type,idpartitiontype,num_partition,num_points,tss,threshold_bin,buffer,resolution,repetitions,trainpercent
 		) values (
 		'".$this->name."',
 		'".$this->description."',
@@ -437,6 +438,7 @@ class Experimento
 		3,
 		1000,
 		0.60,
+		0.50,
 		'mean',
 		10,
 		1,
@@ -462,8 +464,8 @@ class Experimento
 
 	function clonar($id, $sp)
 	{
- 		$sql = "insert into modelr.experiment (idproject,name,description,num_partition,projection,datetime_inicio,datetime_fim,idstatusexperiment,extent_model,extent_projection,idpartitiontype,num_points,tss,iduser,type,automatic_filter,buffer,group_name)
-		 select idproject,name || ' ' || '" . $sp . "',description,num_partition,projection,datetime_inicio,datetime_fim,1,extent_model,extent_projection,idpartitiontype,num_points,tss,iduser,type,automatic_filter,buffer,group_name
+ 		$sql = "insert into modelr.experiment (idproject,name,description,num_partition,projection,datetime_inicio,datetime_fim,idstatusexperiment,extent_model,extent_projection,idpartitiontype,num_points,tss,threshold_bin,iduser,type,automatic_filter,buffer,group_name)
+		 select idproject,name || ' ' || '" . $sp . "',description,num_partition,projection,datetime_inicio,datetime_fim,1,extent_model,extent_projection,idpartitiontype,num_points,tss,threshold_bin,iduser,type,automatic_filter,buffer,group_name
 		 from modelr.experiment
 		 where idexperiment=" . $id;
 		
@@ -518,6 +520,15 @@ class Experimento
 	   {
 		   $this->tss = str_replace(',','.',$this->tss);
 	   }
+
+	   if (empty($this->threshold_bin))
+	   {
+			$this->threshold_bin = 'null';
+	   }
+	   else
+	   {
+		   $this->threshold_bin = str_replace(',','.',$this->threshold_bin);
+	   }
 	   
 	   if (empty($this->repetitions))
 	   {
@@ -535,6 +546,7 @@ class Experimento
        idpartitiontype = ".$this->idpartitiontype.",
 	   num_points = ".$this->num_points.",
 	   tss = ".$this->tss.",
+	   threshold_bin = ".$this->threshold_bin.",
 	   repetitions  = ".$this->repetitions.",
 	   trainpercent  = ".$this->trainpercent."
 	   where idexperiment='".$id."' ";
@@ -568,7 +580,6 @@ class Experimento
 	   	}
 	}
 	
-	
 	function getDados($row)
 	{
 		$this->idexperiment = $row['idexperiment'];
@@ -583,6 +594,7 @@ class Experimento
 		$this->repetitions= $row['repetitions'];
 		$this->trainpercent= $row['trainpercent'];
 		$this->tss = $row['tss'];
+		$this->threshold_bin = $row['threshold_bin'];
 		$this->num_points = $row['num_points'];
 		$this->iduser = $row['iduser'];
 		$this->extent_model = $row['extent_model'];

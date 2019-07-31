@@ -273,7 +273,7 @@ if (($ordenapor=='GRUPO'))
       <!-- dialog body -->
       <div class="modal-body"> 
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        Excluir todos o(s) registros(s) 2? </div>
+        Excluir o(s) registro(s) ? </div>
       <!-- dialog buttons -->
       <div class="modal-footer"> 
         <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
@@ -541,6 +541,12 @@ require 'MSGCODIGO.php';
 	
 	function excluir()
 	{	
+        if(document.getElementById('check-all').checked){
+            var inputs = document.getElementsByName('id_experiment[]');
+            for(let input of inputs) {
+                input.checked = true;
+            }
+        }
 		$('#myModal').modal('hide');
 		document.getElementById('frm').action='exec.<?php echo strtolower($FORM_ACTION);?>.php?op=E';
         console.log('exec.<?php echo strtolower($FORM_ACTION);?>.php?op=E')

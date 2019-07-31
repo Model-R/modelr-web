@@ -18,13 +18,17 @@ trainpercent <- args[6]
 bufferValue <- args[7]
 num_points <- args[8]
 tss <- args[9]
-rasterCSVPath <- args[10]
-ocorrenciasCSVPath <- args[11]
-algorithms <- args[12]
-extensionPath <- args[13]
-projectionPath <- args[14]
+threshold_bin <- args[10] 
+rasterCSVPath <- args[11]
+ocorrenciasCSVPath <- args[12]
+algorithms <- args[13]
+extensionPath <- args[14]
+projectionPath <- args[15]
 
-cat('antes')
+cat('threshold_bin')
+threshold_bin
+cat('\nantes')
+
 if(bufferValue == 'NULL') bufferValue = NULL;
 algorithms
 #extensionPath <- paste0('../../../../../../','mnt/dados/modelr/json/polygon-317.json')
@@ -175,6 +179,7 @@ for (especie in especies) {
             select_par = "TSS",
             select_par_val = tss,
             which_models = c("raw_mean", "bin_consensus"),
+            consensus_level = as.numeric(threshold_bin),
             overwrite = T,
             write_png = T)
 

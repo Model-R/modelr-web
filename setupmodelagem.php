@@ -20,6 +20,7 @@ $idtipoparticionamento = $_REQUEST['cmboxtipoparticionamento'];
 $numpontos = $_REQUEST['edtnumpontos'];
 $buffer = $_REQUEST['edtbuffer'];
 $tss = $_REQUEST['edttss'];
+$threshBin = $_REQUEST['edtbin'];
 $numparticoes = $_REQUEST['edtnumparticoes'];
 //$resolution = $_REQUEST['edtresolution'];
 $repetitions = $_REQUEST['edtnumrepetitions'];
@@ -30,6 +31,7 @@ $Experimento->num_partition = $numparticoes;//integer,
 $Experimento->num_points = $numpontos ;//integer,
 $Experimento->buffer = "'" . $buffer[0] . "'" ;//string
 $Experimento->tss = $tss;
+$Experimento->threshold_bin = $threshBin;
 //$Experimento->resolution = "'" . $resolution[0] . "'";
 $Experimento->repetitions = $repetitions;
 $Experimento->trainpercent = $trainpercent;
@@ -47,10 +49,10 @@ while (list ($key,$val) = @each($box)) {
 $result = $Experimento->alterar($id);
 
 //-------------------------------------------------------------
-$ws = file_get_contents("https://model-r.jbrj.gov.br/ws/?id=" . $id);
+$ws = file_get_contents("https://model-r.jbrj.gov.br/modelr-web/ws/?id=" . $id);
 $json = json_decode($ws); 
-//print_r($json);
-//exit;
+// print_r($json);
+// exit;
 
 if(dirname(__FILE__) !== '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
@@ -93,6 +95,10 @@ $num_points = $json[0]->num_points;
 #tss
 $tss = $json[0]->tss;
 //echo 'tss: ' . $tss;
+//echo '<br>';
+#threshold_bin
+$threshold_bin = $json[0]->threshold_bin;
+//echo 'threshold_bin: ' . $threshold_bin;
 //echo '<br>';
 #partition type
 $partitiontype = strtolower($json[0]->partitiontype);
@@ -301,9 +307,9 @@ $algString = implode(";",$arrayAlg);
 // if($returnData[0] < 10){
 	// header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=76&id=" . $id);
 // } else {
-	// echo "Rscript script_modelagem.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'";
+	// echo "Rscript script_modelagem.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath'";
 	// exit;
-	exec("Rscript script_modelagem.R $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' &");
+	exec("Rscript script_modelagem.R $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' &");
 	if (!file_exists($baseUrl . "temp/result/" . $hashId . "/" . $speciesName . ".csv")) {
 		header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=77&id=" . $id);
 	} else {
@@ -416,6 +422,7 @@ function addMapImageToExperimentResult ($conn, $expid, $speciesName,$hashId, $wi
 		$unhashedid = $expid;
 		$idresulttype = 303;
 		$tss = '';
+		$threshold_bin = '';
 		$auc = '';
 		$sensitivity = '';
 		$equal_sens_spec = '';
@@ -425,7 +432,7 @@ function addMapImageToExperimentResult ($conn, $expid, $speciesName,$hashId, $wi
 		$kappa = '';
 		$sql = "insert into modelr.experiment_result (
 				idexperiment ,  idresulttype ,  
-			partition ,  algorithm ,  tss,  auc ,  sensitivity ,  equal_sens_spec ,
+			partition ,  algorithm ,  tss, auc ,  sensitivity ,  equal_sens_spec ,
 	  prevalence ,  no_omission ,  spec_sens, raster_bin_path, raster_cont_path, raster_cut_path,
 	  png_bin_path, png_cont_path, png_cut_path , kappa, raster_path, raster_png_path, png_path, tiff_path
 	  ) values
