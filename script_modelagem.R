@@ -7,6 +7,7 @@ require(modleR)
 require(raster)
 require(vegan)
 require(psych)
+require(stringr)
 
 args <- commandArgs(TRUE)
 id <- args[1]
@@ -103,7 +104,8 @@ especies <- unique(coordenadas$sp)
 #        .packages = c("raster", "modelr")) %dopar% {
 # algorithmsArray = Mahalanobis;Maxent;GLM;Bioclim;Random Forest;Domain;SVM
 coordenadas[coordenadas$sp == especie, c("lon", "lat")]
-
+cat('coordenadas')
+coordenadas
 #variaveis_cortadas <- mask(crop(stack_rasters, mascara), mascara)
 
 for (especie in especies) {
@@ -178,7 +180,8 @@ for (especie in especies) {
             models_dir = paste0(resultFolder, hashId),
             select_par = "TSS",
             select_par_val = tss,
-            which_models = c("raw_mean", "bin_consensus"),
+            which_models = c("bin_consensus", "raw_mean_cut"),
+            # which_models = c("raw_mean_cut"),
             consensus_level = as.numeric(threshold_bin),
             overwrite = T,
             write_png = T)
@@ -189,10 +192,49 @@ for (especie in especies) {
     ensemble_model(species_name = especie,
 	               occurrences = coordenadas,
                    models_dir = paste0(resultFolder, hashId),
-	               which_models = c("raw_mean", "bin_consensus"),
+	               which_models = c("bin_consensus", "raw_mean_cut"),
+                #    which_models = c("raw_mean_cut"),
 	               consensus = F,
-	               consensus_level = 0.5,
+	               consensus_level = as.numeric(threshold_bin),
 	               write_png = T)
+
+    ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),
+                              recursive = T,
+                              pattern = "raw_mean_cut.+tif$",
+                              full.names = T)
+
+    titles <- c("raw_mean_cut\nmean", "raw_mean_cut\nmedian", "raw_mean_cut\nrange", "raw_mean_cut\nsd")
+    filenames <- c("_raw_mean_cut_mean", "_raw_mean_cut_median", "_raw_mean_cut_range", "_raw_mean_cut_sd")
+
+    for (val in c(1,2,3,4)) {
+        png(filename = paste0(resultFolder, hashId,"/",especie, "/present/ensemble/",especie, filenames[val],".png"))
+        r <- raster(ensemble_files[val])
+        plot(r, main = titles[val])
+        # coord <- coordenadas[, c(lon, lat)]
+        maps::map("world", , add = T, col = "grey")
+        # points(coord, pch = 19, cex = 0.3,
+        #         col = scales::alpha("cyan", 0.6))
+        dev.off()
+    }
+
+    ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),
+                              recursive = T,
+                              pattern = "bin_consensus.+tif$",
+                              full.names = T)
+
+    titles <- c("bin_consensus\nmean", "bin_consensus\nmedian", "bin_consensus\nrange", "bin_consensus\nsd")
+    filenames <- c("_bin_consensus_mean", "_bin_consensus_median", "_bin_consensus_range", "_bin_consensus_sd")
+
+    for (val in c(1,2,3,4)) {
+        png(filename = paste0(resultFolder, hashId,"/",especie, "/present/ensemble/",especie, filenames[val],".png"))
+        r <- raster(ensemble_files[val])
+        plot(r, main = titles[val])
+        # coord <- coordenadas[, c(lon, lat)]
+        maps::map("world", , add = T, col = "grey")
+        # points(coord, pch = 19, cex = 0.3,
+        #         col = scales::alpha("cyan", 0.6))
+        dev.off()
+    }
 
 	#Criando a tabela com os valores de desempenho do modelo.
 
