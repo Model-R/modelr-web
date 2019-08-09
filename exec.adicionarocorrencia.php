@@ -117,12 +117,13 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		} else {
 			$tombo = 'null';
 		}
+		$localidade= str_replace("'","`",$val[15]);
 		if(empty($herbario)){
 			$fonte = 'CSV';
 		} else {
 			$fonte = 'GBIF';
 		}
-		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$latitude,$longitude,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio,$herbario,$tombo,0,$fonte);
+		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$latitude,$longitude,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio,$herbario,$tombo,0,$fonte,$localidade);
 	} 
 	
 //}

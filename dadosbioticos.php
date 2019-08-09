@@ -48,7 +48,7 @@ if ($op=='A')
             <p>
                 O CSV deve seguir o seguinte modelo:
                 <br><br>
-                [sp*],[lat*],[long*],[num_coleta],[estado],[municipio],[coletor]
+                [sp*],[lat*],[long*],[num_coleta],[país],[estado],[municipio],[localidade],[coletor]
                 <br><br>
 				<img src='imagens/exemplo csv entrada modelr.PNG' style="width: 100%;">
 				<br><br>
@@ -649,8 +649,8 @@ function printCSV(lines){
 	var body = '';
 	var separator = document.getElementById("csv-select").options[document.getElementById("csv-select").selectedIndex].value;
 	
-	var spindex, latindex, longindex, estadoindex, municipioindex, coletorindex, numcoletaindex;
-	spindex = latindex = longindex = estadoindex = municipioindex = coletorindex = numcoletaindex = -1;
+	var spindex, latindex, longindex, estadoindex, municipioindex, coletorindex, numcoletaindex, paisindex, localidadeindex;
+	spindex = latindex = longindex = estadoindex = municipioindex = coletorindex = numcoletaindex = paisindex = localidadeindex = -1;
 	var csv_headers = lines[0].split(separator);
 	for (i = 0; i < csv_headers.length; i++) {
 		if(csv_headers[i] == 'sp') spindex = i;
@@ -660,6 +660,8 @@ function printCSV(lines){
 		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'municipio') municipioindex = i;
 		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'coletor') coletorindex = i;
 		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'num_coleta') numcoletaindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'país' || csv_headers[i].toLowerCase().replace(/\s/g, "") === 'pais') paisindex = i;
+		else if(csv_headers[i].toLowerCase().replace(/\s/g, "") === 'localidade') localidadeindex = i;
 	}
 	
 	if(spindex == -1 || latindex == -1 || longindex == -1){
@@ -677,24 +679,28 @@ function printCSV(lines){
 			numcoleta = values[numcoletaindex] || null;
 			longitude = values[longindex] || 0;
 			latitude = values[latindex] || 0;
-			
+			pais = values[paisindex] || '';
+			localidade = values[localidadeindex] || '';
+
 			var idexperimento = document.getElementById('id').value;
 			//split * 
-			var Jval = idexperimento + '*2*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*****'+estado+'*'+municipio+'**'; 
+			var Jval = idexperimento + '*2*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'****'+pais+'*'+estado+'*'+municipio+'***'+localidade; 
 			 
 			body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
 			body +='<td class=" ">'+taxon+'</td>';
 			body +='<td class=" ">'+coletor+'</td>';
 			body +='<td class=" ">'+numcoleta+'</td>';
+			body +='<td class=" ">'+pais+'</td>';
 			body +='<td class=" ">'+estado+'</td>';
 			body +='<td class=" ">'+municipio+'</td>';
+			body +='<td class=" ">'+localidade+'</td>';
 			body +='<td class=" ">'+latitude+', '+longitude+'</td>';
 
 		}
 		
 		var table = '';
 		table += '<table class="table table-csv table-striped responsive-utilities jambo_table bulk_action"><thead><tr class="headings"><th><input type="checkbox" id="chkboxtodos2" name="chkboxtodos2" onclick="selecionaTodos2(true);">';
-		table += '</th><th class="column-title">Taxon </th><th>Coletor</th><th>Número de Coleta</th><th>Estado</th><th>Município</th><th class="column-title">Coordenadas</th>';
+		table += '</th><th class="column-title">Taxon </th><th>Coletor</th><th>Número de Coleta</th><th>País</th><th>Estado</th><th>Município</th><th>Localidade</th><th class="column-title">Coordenadas</th>';
 		table += '<a class="antoo" style="color:#fff; font-weight:500;">Total de Registros selecionados: ( <span class="action-cnt"> </span> ) </a>';
 		table += '</th></tr></thead>';
 		table += '<tbody>'+body+'</tbody></table>';

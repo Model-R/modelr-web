@@ -359,7 +359,7 @@ class Experimento
 //		exit;
 	}
 
-	function adicionarOcorrencia($idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$p,$e,$m,$herbario,$tombo,$codtestemunho,$fonte)
+	function adicionarOcorrencia($idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$p,$e,$m,$herbario,$tombo,$codtestemunho,$fonte,$localidade)
 	{	
 		// echo $idexperimento;
 		// exit;
@@ -381,7 +381,8 @@ class Experimento
 		majorarea,
 		minorarea,
 		codtestemunho,
-		fonte
+		fonte,
+		locality
 		) values (
 		'".$idexperimento."',
 		'".$idfontedados."',
@@ -400,10 +401,12 @@ class Experimento
 		'".$e."',
 		'".$m."',
 		".$codtestemunho.",
-		'".$fonte."'
+		'".$fonte."',
+		'".$localidade."'
 		)";
 		
-		//echo $sql . "<br>";
+		// echo $sql . "<br>";
+		// exit;
 		// 8 status occurrence = OK
 		$resultado = pg_exec($this->conn,$sql);
 		//echo $resultado;
