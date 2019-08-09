@@ -404,6 +404,7 @@ function printJabotOnly(jabotData){
 	var body = '';		
 	//print jabot
 	exibe('loading','Buscando Ocorrências');
+	console.log(jabotData[0])
 	for (i = 0; i < jabotData.length; i++) {
 		//alert(i);
 		longitude = jabotData[i].longitude;
@@ -484,6 +485,7 @@ async function printData(gbifData, jabotData, HVdata = [])
 	}
 	
 	//print jabot
+	console.log(jabotData[0])
 	for (i = 0; i < jabotData.length; i++) {
 		//alert(i);
 		longitude = jabotData[i].longitude;
@@ -491,14 +493,15 @@ async function printData(gbifData, jabotData, HVdata = [])
 		
 		especie = especie || jabotData[i].taxoncompleto;
 
-		taxon = jabotData[i].taxoncompleto;
+		taxon = jabotData[i].taxoncompleto || '';
 		tombo = jabotData[i].numtombo;
-		coletor = jabotData[i].coletor;
+		coletor = jabotData[i].coletor || '';
 		numcoleta = jabotData[i].numcoleta;
-		pais = jabotData[i].pais;
-		estado = jabotData[i].estado;
-		cidade = jabotData[i].municipio;
-		herbario = jabotData[i].herbario;
+		pais = jabotData[i].pais || '';
+		estado = jabotData[i].estado || '';
+		cidade = jabotData[i].municipio || '';
+		herbario = jabotData[i].herbario || '';
+		localidade = jabotData[i].localidade || '';
 		
 		//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 		var idexperimento = document.getElementById('id').value;
@@ -511,8 +514,11 @@ async function printData(gbifData, jabotData, HVdata = [])
 			body +='<td class="a-right a-right ">'+herbario+'</td>';
 			body +='<td class="a-right a-right ">'+tombo+'</td>';
 			body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
-			body +='<td class=" ">'+latitude+', '+longitude+'</td>';
-			body +='<td class=" ">'+pais+', '+estado+' - '+cidade+'</td>';
+			body +='<td class=" ">'+latitude+'<br>'+longitude+'</td>';
+			body +='<td class=" ">'+pais+'</td>';
+			body +='<td class=" ">'+estado+'</td>';
+			body +='<td class=" ">'+cidade+'</td>';
+			body +='<td class=" ">'+localidade+'</td>';
 		
 	}
 	
@@ -560,10 +566,10 @@ async function printData(gbifData, jabotData, HVdata = [])
 	var table = '';
 	table += '<table class="table table-striped responsive-utilities jambo_table bulk_action"><thead><tr class="headings"><th><input type="checkbox" id="chkboxtodos2" name="chkboxtodos2" onclick="selecionaTodos2(true);">';
 	table += '</th><th class="column-title">Táxon </th><th class="column-title">Origem </th><th class="column-title">Coleção</th><th class="column-title">Tombo </th><th class="column-title">Coletor </th><th class="column-title">Coordenadas </th>';
-	table += '<th class="column-title">Localização</th>';
+	table += '<th class="column-title">País</th><th class="column-title">Estado</th><th class="column-title">Município</th><th class="column-title">Localidade</th>';
 	table += '<a class="antoo" style="color:#fff; font-weight:500;">Total de Registros selecionados: ( <span class="action-cnt"> </span> ) </a>';
 	table += '</th></tr></thead>';
-	table += '<tbody><td class="a-center total-busca" colspan=8>Total:' + (jabotData.length + gbifData.length + HVdata.length)  + '</td>'+body+'</tbody></table>';
+	table += '<tbody><td class="a-center total-busca" colspan=11>Total:' + (jabotData.length + gbifData.length + HVdata.length)  + '</td>'+body+'</tbody></table>';
 	table += '';
 		
 //			x += '('+myObj.results[i]['decimalLongitude'] + ', '+myObj.results[i]['decimalLongitude']+ ')';

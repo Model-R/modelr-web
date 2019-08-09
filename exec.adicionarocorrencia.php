@@ -31,7 +31,7 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 
 //if ($fontedados==1)
 //{
-	$sql = "select numtombo,taxoncompleto,codtestemunho,coletor,numcoleta,latitude,longitude,pais,estado_prov as estado,cidade as municipio, siglacolecao as herbario
+	$sql = "select numtombo,taxoncompleto,codtestemunho,coletor,numcoleta,latitude,longitude,pais,estado_prov as estado,cidade as municipio, siglacolecao as herbario, descrlocal as localidade
 			from  
 								publicacao.extracao_jabot_geral where latitude is not null and longitude is not null and
         familia || ' ' || taxoncompleto ilike '%".$especie."%' and ";
@@ -73,8 +73,9 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		$imagemservidor = $rowimagem ['servidor'];
 		$imagemcaminho =  $rowimagem ['path'];
 		$imagemarquivo =  $rowimagem ['arquivo'];
+		$localidade =  $rowimagem ['localidade'];
 	
-		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio, $herbario,$tombo,$codtestemunho,'Jabot');
+		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio, $herbario,$tombo,$codtestemunho,'Jabot',$localidade);
 	}
 //}
 //if ($fontedados==2)
