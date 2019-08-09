@@ -73,7 +73,7 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		$imagemservidor = $rowimagem ['servidor'];
 		$imagemcaminho =  $rowimagem ['path'];
 		$imagemarquivo =  $rowimagem ['arquivo'];
-		$localidade =  $rowimagem ['localidade'];
+		$localidade =  $row ['localidade'];
 	
 		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio, $herbario,$tombo,$codtestemunho,'Jabot',$localidade);
 	}

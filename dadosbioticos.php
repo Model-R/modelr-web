@@ -462,17 +462,18 @@ async function printData(gbifData, jabotData, HVdata = [])
 
 		taxon = gbifData[0].scientificName;
 		tombo = gbifData[i].catalogNumber;
-		coletor = gbifData[i].recordedBy;
+		coletor = gbifData[i].recordedBy || '';
 		numcoleta = gbifData[i].recordNumber;
-		pais = gbifData[i].country;
-		estado = gbifData[i].stateProvince;
-		cidade = gbifData[i].municipality;
-		herbario = gbifData[i].datasetName;
+		pais = gbifData[i].country || '';
+		estado = gbifData[i].stateProvince || '';
+		cidade = gbifData[i].municipality || '';
+		herbario = gbifData[i].datasetName || '';
+		localidade = gbifData[i].locality || '';
 		
 		//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 		var idexperimento = document.getElementById('id').value;
 		//split * 
-		var Jval = idexperimento + '*2*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'****'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo; 
+		var Jval = idexperimento + '*2*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'****'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
 
 			body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
 			body +='<td class=" ">'+taxon+'</td>';
@@ -481,11 +482,13 @@ async function printData(gbifData, jabotData, HVdata = [])
 			body +='<td class="a-right a-right ">'+tombo+'</td>';
 			body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
 			body +='<td class=" ">'+latitude+', '+longitude+'</td>';
-			body +='<td class=" ">'+pais+', '+estado+' - '+cidade+'</td>';
+			body +='<td class=" ">'+pais+'</td>';
+			body +='<td class=" ">'+estado+'</td>';
+			body +='<td class=" ">'+cidade+'</td>';
+			body +='<td class=" ">'+localidade+'</td>';
 	}
 	
 	//print jabot
-	console.log(jabotData[0])
 	for (i = 0; i < jabotData.length; i++) {
 		//alert(i);
 		longitude = jabotData[i].longitude;
