@@ -121,7 +121,10 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		$localidade= str_replace("'","`",$val[15]);
 		if(empty($herbario)){
 			$fonte = 'CSV';
-		} else {
+		} else if($fontedados == 4) {
+			$fonte = 'HV';
+		} 
+		else {
 			$fonte = 'GBIF';
 		}
 		$Experimento->adicionarOcorrencia($idexperimento,$fontedados,$latitude,$longitude,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio,$herbario,$tombo,0,$fonte,$localidade);

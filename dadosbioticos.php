@@ -527,6 +527,7 @@ async function printData(gbifData, jabotData, HVdata = [])
 	
 	if(document.getElementById('checkfontehv').checked==true){
 		HVdata = await getHV(especie);
+		console.log(HVdata[0])
 		for (i = 0; i < HVdata.length; i++) {
 			//alert(i);
 			try {		
@@ -543,13 +544,14 @@ async function printData(gbifData, jabotData, HVdata = [])
 				estado = HVdata[i].stateProvince;
 				cidade = HVdata[i].municipality;
 				herbario = HVdata[i].collectionCode;
+				localidade = HVdata[i].locality;
 				
 				//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 				var idexperimento = document.getElementById('id').value;
 				var imageComponents = extractComponents(HVdata[i].associatedMedia.replace('imagens1','imagens4'));
 				var html_imagem='<a href=templatehv.php?path='+imageComponents.path + '/' + imageComponents.file+' target=\'Visualizador\'><img src='+HVdata[i].associatedMedia.replace('imagens1','imagens4')+'&width=100&height=150></a>';
 				//split * 
-				var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo; 
+				var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
 					body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
 					body +='<td class=" ">'+html_imagem+ ' ' + taxon+'</td>';
 					body +='<td class="a-right a-right ">HV</td>';
@@ -557,7 +559,10 @@ async function printData(gbifData, jabotData, HVdata = [])
 					body +='<td class="a-right a-right ">'+tombo+'</td>';
 					body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
 					body +='<td class=" ">'+latitude+', '+longitude+'</td>';
-					body +='<td class=" ">'+pais+', '+estado+' - '+cidade+'</td>';
+					body +='<td class=" ">'+pais+'</td>';
+					body +='<td class=" ">'+estado+'</td>';
+					body +='<td class=" ">'+cidade+'</td>';
+					body +='<td class=" ">'+localidade+'</td>';
 			} catch (error) {
 				console.log(error)
 			}
@@ -872,13 +877,14 @@ function printHV (data) {
 			estado = data[i].stateProvince;
 			cidade = data[i].municipality;
 			herbario = data[i].collectionCode;
+			localidade = data[i].locality;
 			
 			//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 			var idexperimento = document.getElementById('id').value;
 			var imageComponents = extractComponents(data[i].associatedMedia.replace('imagens1','imagens4'));
 			var html_imagem='<a href=templatehv.php?path='+imageComponents.path + '/' + imageComponents.file+' target=\'Visualizador\'><img src='+data[i].associatedMedia.replace('imagens1','imagens4')+'&width=100&height=150></a>';
 			//split * 
-			var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo; 
+			var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
 				body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
 				body +='<td class=" ">'+html_imagem+ ' ' + taxon+'</td>';
 				body +='<td class="a-right a-right ">HV</td>';
@@ -886,7 +892,10 @@ function printHV (data) {
 				body +='<td class="a-right a-right ">'+tombo+'</td>';
 				body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
 				body +='<td class=" ">'+latitude+', '+longitude+'</td>';
-				body +='<td class=" ">'+pais+', '+estado+' - '+cidade+'</td>';
+				body +='<td class=" ">'+pais+'</td>';
+				body +='<td class=" ">'+estado+'</td>';
+				body +='<td class=" ">'+cidade+'</td>';
+				body +='<td class=" ">'+localidade+'</td>';
 		} catch (error) {
 			console.log(error)
 		}
@@ -895,10 +904,10 @@ function printHV (data) {
 	var table = '';
 	table += '<table class="table table-striped responsive-utilities jambo_table bulk_action"><thead><tr class="headings"><th><input type="checkbox" id="chkboxtodos2" name="chkboxtodos2" onclick="selecionaTodos2(true);">';
 	table += '</th><th class="column-title">Táxon </th><th class="column-title">Origem </th><th class="column-title">Coleção</th><th class="column-title">Tombo </th><th class="column-title">Coletor </th><th class="column-title">Coordenadas </th>';
-	table += '<th class="column-title">Localização</th>';
+	table += '<th class="column-title">País</th><th class="column-title">Estado</th><th class="column-title">Município</th><th class="column-title">Localidade</th>';
 	table += '<a class="antoo" style="color:#fff; font-weight:500;">Total de Registros selecionados: ( <span class="action-cnt"> </span> ) </a>';
 	table += '</th></tr></thead>';
-	table += '<tbody><td class="a-center total-busca" colspan=8>Total:' + (contador)  + '</td>'+body+'</tbody></table>';
+	table += '<tbody><td class="a-center total-busca" colspan=11>Total:' + (contador)  + '</td>'+body+'</tbody></table>';
 	table += '';
 	
 	document.getElementById("div_resultadobusca").innerHTML = table;
