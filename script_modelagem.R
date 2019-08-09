@@ -8,6 +8,7 @@ require(raster)
 require(vegan)
 require(psych)
 require(stringr)
+require(gtools)
 
 args <- commandArgs(TRUE)
 id <- args[1]
@@ -25,9 +26,13 @@ ocorrenciasCSVPath <- args[12]
 algorithms <- args[13]
 extensionPath <- args[14]
 projectionPath <- args[15]
+models <- args[16]
 
-cat('threshold_bin')
-threshold_bin
+cat('models')
+models
+modelsArray <- strsplit(models, ";")
+cat('\n')
+modelsArray[[1]]
 cat('\nantes')
 
 if(bufferValue == 'NULL') bufferValue = NULL;
@@ -149,39 +154,35 @@ for (especie in especies) {
 
 	algorithsNames <- c();
 	if(algorithmsArray[[1]] == TRUE){
-		c(algorithsNames,'mahal')
+		algorithsNames = c(algorithsNames,'mahal')
 	}
 	if(algorithmsArray[[2]] == TRUE){
-		c(algorithsNames, 'maxent')
+		algorithsNames = c(algorithsNames, 'maxent')
 	}
 	if(algorithmsArray[[3]] == TRUE){
-		c(algorithsNames, 'glm')
+		algorithsNames = c(algorithsNames, 'glm')
 	}
 	if(algorithmsArray[[4]] == TRUE){
-		c(algorithsNames, 'bioclim')
+		algorithsNames = c(algorithsNames, 'bioclim')
 	}
 	if(algorithmsArray[[5]] == TRUE){
-		c(algorithsNames, 'rf')
+		algorithsNames = c(algorithsNames, 'rf')
 	}
 	if(algorithmsArray[[6]] == TRUE){
-		c(algorithsNames, 'domain')
+		algorithsNames = c(algorithsNames, 'domain')
 	}
 	if(algorithmsArray[[7]] == TRUE){
-		c(algorithsNames, 'svm')
+		algorithsNames = c(algorithsNames, 'svm')
 	}
 	
 	#gerando os ensembles por algoritmo
-    cat('###################\n')
-    cat(especie)
-    cat('\n')
-    cat(typeof(especie))
     final_model(species_name = especie,
             algorithms = NULL, #if null it will take all the in-disk algorithms 
             models_dir = paste0(resultFolder, hashId),
             select_par = "TSS",
             select_par_val = tss,
-            which_models = c("bin_consensus", "raw_mean_cut"),
-            # which_models = c("raw_mean_cut"),
+            #which_models = c("bin_consensus", "raw_mean_cut"),
+            which_models = modelsArray[[1]],
             consensus_level = as.numeric(threshold_bin),
             overwrite = T,
             write_png = T)
@@ -192,49 +193,63 @@ for (especie in especies) {
     ensemble_model(species_name = especie,
 	               occurrences = coordenadas,
                    models_dir = paste0(resultFolder, hashId),
-	               which_models = c("bin_consensus", "raw_mean_cut"),
-                #    which_models = c("raw_mean_cut"),
+	            #    which_models = c("bin_consensus", "raw_mean_cut"),
+                   which_models = modelsArray[[1]],
 	               consensus = F,
 	               consensus_level = as.numeric(threshold_bin),
 	               write_png = T)
 
-    ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),
-                              recursive = T,
-                              pattern = "raw_mean_cut.+tif$",
-                              full.names = T)
+    #Ajuste título da imagem pasta ENSEMBLE
+    for (model in modelsArray[[1]]) {
+        ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),
+                                recursive = T,
+                                pattern = paste0(model,".+tif$"),
+                                full.names = T)
 
-    titles <- c("raw_mean_cut\nmean", "raw_mean_cut\nmedian", "raw_mean_cut\nrange", "raw_mean_cut\nsd")
-    filenames <- c("_raw_mean_cut_mean", "_raw_mean_cut_median", "_raw_mean_cut_range", "_raw_mean_cut_sd")
+        ensemble_files <- mixedsort(ensemble_files)
+        titles <- c(paste0(model,"\nmean"), paste0(model,"\nmedian"), paste0(model,"\nrange"), paste0(model,"\nsd"))
+        filenames <- c(paste0("_",model,"_mean"), paste0("_",model,"_median"), paste0("_",model,"_range"), paste0("_",model,"_sd"))
 
-    for (val in c(1,2,3,4)) {
-        png(filename = paste0(resultFolder, hashId,"/",especie, "/present/ensemble/",especie, filenames[val],".png"))
-        r <- raster(ensemble_files[val])
-        plot(r, main = titles[val])
-        # coord <- coordenadas[, c(lon, lat)]
-        maps::map("world", , add = T, col = "grey")
-        # points(coord, pch = 19, cex = 0.3,
-        #         col = scales::alpha("cyan", 0.6))
-        dev.off()
+        if(length(ensemble_files)){
+            for (val in c(1,2,3,4)) {
+                png(filename = paste0(resultFolder, hashId,"/",especie, "/present/ensemble/",especie, filenames[val],".png"))
+                r <- raster(ensemble_files[val])
+                plot(r, main = titles[val])
+                # coord <- coordenadas[, c(lon, lat)]
+                maps::map("world", , add = T, col = "grey")
+                # points(coord, pch = 19, cex = 0.3,
+                #         col = scales::alpha("cyan", 0.6))
+                dev.off()
+            }
+        }
     }
 
-    ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),
-                              recursive = T,
-                              pattern = "bin_consensus.+tif$",
-                              full.names = T)
+    #Ajuste título da imagem pasta FINAL MODELS
+    for (model in modelsArray[[1]]) {
+        ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/final_models"),
+                                recursive = T,
+                                pattern = paste0(model,".+tif$"),
+                                full.names = T)
 
-    titles <- c("bin_consensus\nmean", "bin_consensus\nmedian", "bin_consensus\nrange", "bin_consensus\nsd")
-    filenames <- c("_bin_consensus_mean", "_bin_consensus_median", "_bin_consensus_range", "_bin_consensus_sd")
-
-    for (val in c(1,2,3,4)) {
-        png(filename = paste0(resultFolder, hashId,"/",especie, "/present/ensemble/",especie, filenames[val],".png"))
-        r <- raster(ensemble_files[val])
-        plot(r, main = titles[val])
-        # coord <- coordenadas[, c(lon, lat)]
-        maps::map("world", , add = T, col = "grey")
-        # points(coord, pch = 19, cex = 0.3,
-        #         col = scales::alpha("cyan", 0.6))
-        dev.off()
+        if(length(ensemble_files)){
+            for (file in ensemble_files) {
+                for(algo in algorithsNames){
+                    if(grepl(algo, file, fixed=TRUE)){
+                        png(filename = paste0(resultFolder, hashId,"/",especie, "/present/final_models/",especie,"_",algo,"_",model,".png"))
+                        r <- raster(file)
+                        plot(r, main = paste0(algo,"\n",model))
+                        # coord <- coordenadas[, c(lon, lat)]
+                        maps::map("world", , add = T, col = "grey")
+                        # points(coord, pch = 19, cex = 0.3,
+                        #         col = scales::alpha("cyan", 0.6))
+                        dev.off()
+                    }
+                }
+            }
+        }
     }
+
+
 
 	#Criando a tabela com os valores de desempenho do modelo.
 

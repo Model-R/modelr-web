@@ -128,10 +128,23 @@ class Experimento
 		values ('.$id.','.$idalgoritmos.')';
 		$res2 = pg_exec($this->conn,$sql);
 	}
+
+	function incluirModelo($id,$idmodelo)
+	{
+		$sql = 'insert into modelr.experiment_use_model (idexperiment,idmodel)
+		values ('.$id.','.$idmodelo.')';
+		$res2 = pg_exec($this->conn,$sql);
+	}
 	
 	function limparAlgoritmo($id)
 	{
 		$sql = "delete from modelr.experiment_use_algorithm where idexperiment = '".$id."'; ";
+		$res2 = pg_exec($this->conn,$sql);
+	}
+
+	function limparModelo($id)
+	{
+		$sql = "delete from modelr.experiment_use_model where idexperiment = '".$id."'; ";
 		$res2 = pg_exec($this->conn,$sql);
 	}
 
@@ -203,17 +216,28 @@ class Experimento
 			{
 				return false;
 			}
-		}
-		// else
-		// {
-		// 	if($idalgoritmos == 2 || $idalgoritmos == 5){
-		// 		return true;
-		// 	}
-		// 	else {
-		// 		return false;
-		// 	}
-		// }
-		
+		}		
+	}
+
+	function usaModelo($id,$idmodelo)
+	{
+
+		$sql = 'select * from modelr.experiment_use_model where idexperiment = '.$id.';';
+		$res = pg_exec($this->conn,$sql);
+
+		if (pg_num_rows($res)>0)
+		{
+			$sql2 = 'select * from modelr.experiment_use_model where idexperiment = '.$id.' and idmodel = '.$idmodelo.';';
+			$res2 = pg_exec($this->conn,$sql2);
+			if (pg_num_rows($res2)>0)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}		
 	}
 
 	function usaRaster($id,$idraster)
@@ -231,16 +255,7 @@ class Experimento
 			if (pg_num_rows($res2)>0){
 				return false;
 			} 
-			// else {
-			// 	if($idraster == 4 || $idraster == 5 || $idraster == 13 || $idraster == 14 || $idraster == 84 || $idraster == 85 || $idraster == 93 || $idraster == 94){
-			// 		return true;
-			// 	}
-			// 	else {
-			// 		return false;
-			// 	}
-			// }
-		}
-		
+		}		
 	}	
 	
 	function usaBioRaster($id,$idraster,$value)

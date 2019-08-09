@@ -102,15 +102,37 @@ eua.idexperiment = '.$row['idexperiment'];
 		}
 	}
 	$json_str4 .=']';
+
+	// Modelos
+	$sql5 = 'select a.idmodel,a.model from modelr.experiment_use_model eua, modelr.models a where
+eua.idmodel = a.idmodel and
+eua.idexperiment = '.$row['idexperiment'];
+	$res5 = pg_exec($conn,$sql5);
+	$qtd5 = pg_num_rows($res5);
+	$c5 = 0;
+	$json_str5='[';
+	while ($row5 = pg_fetch_array($res5))
+	{
+		$c5++;
+		if ($c5<$qtd5)
+		{	
+			$json_str5.='{"model":"'.$row5['model'].'", "idmodel":"'.$row5['idmodel'].'"},';
+		}
+		else
+		{
+			$json_str5.='{"model":"'.$row5['model'].'", "idmodel":"'.$row5['idmodel'].'"}';
+		}
+	}
+	$json_str5 .=']';
 	
 			
 	if ($c<$qtd)
 	{	
-		$json_str.='{"idexperiment":"'.md5($row['idexperiment']).'", "id":"'.$row['idexperiment'].'", "name":"'.$row['name'].'", "description": "'.$row['name'].'", "num_repetitions": "'.$row['repetitions'].'", "num_partition": "'.$row['num_partition'].'", "trainpercent": "'.$row['trainpercent'].'", "extent_model": "'.$row['extent_model'].'", "extent_projection": "'.$row['extent_projection'].'", "buffer": "'.$row['buffer'].'", "num_points": "'.$row['num_points'].'",  "tss": "'.$row['tss'].'", "threshold_bin": "'.$row['threshold_bin'].'", "statusexperiment": "'.$row['statusexperiment'].'","partitiontype": "'.$row['partitiontype'].'","resolution": "'.$row['resolution'].'", "occurrences": '.$json_str2.',"raster": '.$json_str3.',"algorithm": '.$json_str4.'},';
+		$json_str.='{"idexperiment":"'.md5($row['idexperiment']).'", "id":"'.$row['idexperiment'].'", "name":"'.$row['name'].'", "description": "'.$row['name'].'", "num_repetitions": "'.$row['repetitions'].'", "num_partition": "'.$row['num_partition'].'", "trainpercent": "'.$row['trainpercent'].'", "extent_model": "'.$row['extent_model'].'", "extent_projection": "'.$row['extent_projection'].'", "buffer": "'.$row['buffer'].'", "num_points": "'.$row['num_points'].'",  "tss": "'.$row['tss'].'", "threshold_bin": "'.$row['threshold_bin'].'", "statusexperiment": "'.$row['statusexperiment'].'","partitiontype": "'.$row['partitiontype'].'","resolution": "'.$row['resolution'].'", "occurrences": '.$json_str2.',"raster": '.$json_str3.',"algorithm": '.$json_str4.', "model": '.$json_str5.'},';
 	}
 	else
 	{
-		$json_str.='{"idexperiment":"'.md5($row['idexperiment']).'", "id":"'.$row['idexperiment'].'", "name":"'.$row['name'].'", "description": "'.$row['name'].'", "num_repetitions": "'.$row['repetitions'].'", "num_partition": "'.$row['num_partition'].'", "trainpercent": "'.$row['trainpercent'].'", "extent_model": "'.$row['extent_model'].'", "extent_projection": "'.$row['extent_projection'].'", "buffer": "'.$row['buffer'].'", "num_points": "'.$row['num_points'].'",  "tss": "'.$row['tss'].'", "threshold_bin": "'.$row['threshold_bin'].'", "statusexperiment": "'.$row['statusexperiment'].'","partitiontype": "'.$row['partitiontype'].'","resolution": "'.$row['resolution'].'", "occurrences": '.$json_str2.', "raster": '.$json_str3.',"algorithm": '.$json_str4.'}';
+		$json_str.='{"idexperiment":"'.md5($row['idexperiment']).'", "id":"'.$row['idexperiment'].'", "name":"'.$row['name'].'", "description": "'.$row['name'].'", "num_repetitions": "'.$row['repetitions'].'", "num_partition": "'.$row['num_partition'].'", "trainpercent": "'.$row['trainpercent'].'", "extent_model": "'.$row['extent_model'].'", "extent_projection": "'.$row['extent_projection'].'", "buffer": "'.$row['buffer'].'", "num_points": "'.$row['num_points'].'",  "tss": "'.$row['tss'].'", "threshold_bin": "'.$row['threshold_bin'].'", "statusexperiment": "'.$row['statusexperiment'].'","partitiontype": "'.$row['partitiontype'].'","resolution": "'.$row['resolution'].'", "occurrences": '.$json_str2.', "raster": '.$json_str3.',"algorithm": '.$json_str4.', "model": '.$json_str5.'}';
 	}
 }
 $json_str .=']';

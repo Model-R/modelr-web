@@ -269,6 +269,28 @@ if (empty($resolution))
 						
 						</div>				
 					</div>
+					<div class="col-md-5 col-sm-5 col-xs-5">
+						<div class="x_panel">
+							<div class="x_title">
+								<h2>Modelos <small>Marque os modelos que deseja utilizar</small></h2>
+								<div class="clearfix"></div>
+							</div>
+							<div class="x_content">
+							 <p style="padding: 5px;">
+							 <?php $sql = 'select * from modelr.models order by model asc';
+							 $res = pg_exec($conn,$sql);
+							 while ($row = pg_fetch_array($res))
+							 {
+								 ?>
+								<input <?php if ($Experimento->usaModelo($id,$row['idmodel'])) echo "checked";?> type="checkbox" name="modelos[]" id="checkmodelo<?php echo $row['idmodel'];?>" value="<?php echo $row['idmodel'];?>" data-parsley-mincheck="2" required class="flat" /> <?php echo $row['model'] . ' - ' . $row['model_name'];?>
+								<br />
+							 <?php } ?>
+								<!-- end pop-over -->
+
+							</div>
+						
+						</div>				
+					</div>
 				</form>
 			</div>
 		</div>

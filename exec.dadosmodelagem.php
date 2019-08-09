@@ -35,15 +35,21 @@ $Experimento->repetitions = $repetitions;
 $Experimento->trainpercent = $trainpercent;
 
 
-if(!empty($_REQUEST['algoritmo'])){
-	$result = $Experimento->limparAlgoritmo($id);
-}
+$result = $Experimento->limparAlgoritmo($id);
+$result = $Experimento->limparModelo($id);
 
 $box=$_REQUEST['algoritmo'];
 while (list ($key,$val) = @each($box)) { 
 	$result = $Experimento->incluirAlgoritmo($id,$val);
 }
 
+$box=$_REQUEST['modelos'];
+while (list ($key,$val) = @each($box)) { 
+	$result = $Experimento->incluirModelo($id,$val);
+}
+
+// print_r($_REQUEST);
+// exit;
 if ($result = $Experimento->alterar($id))
 {
 	header("Location: cadexperimento.php?op=A&MSGCODIGO=84&id=$id&tab=$tab");
