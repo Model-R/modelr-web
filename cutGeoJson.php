@@ -79,7 +79,7 @@ if (!file_exists($baseUrl . "temp/" . $expid )) {
 }
 
 
-exec("Rscript script_pos.R $expid $filePath $rasterCutPath");
+exec("Rscript R/script_pos.R $expid $filePath $rasterCutPath");
 
 return 'success';
 

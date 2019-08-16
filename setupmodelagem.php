@@ -316,14 +316,14 @@ $time = $_SESSION['s_nome'] . " - experimento " . $id . " - Inicio: " . date("h:
 $algString = implode(";",$arrayAlg);
 $modelString = implode(";",$modelList);
 
-// exec("Rscript script_number_valid_points.r " . $id . ' ' . $rasterCSVPath . ' '. $ocorrenciasCSVPath . ' ' . $ExtentModelPath, $a, $b);
+// exec("Rscript R/script_number_valid_points.r " . $id . ' ' . $rasterCSVPath . ' '. $ocorrenciasCSVPath . ' ' . $ExtentModelPath, $a, $b);
 // $returnData = explode(" ",$a[1]);
 // if($returnData[0] < 10){
 	// header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=76&id=" . $id);
 // } else {
-	// echo "Rscript script_modelagem.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' '$modelString'";
+	// echo "Rscript R/script_modelagem.r $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' '$modelString'";
 	// exit;
-	exec("Rscript script_modelagem.R $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' '$modelString' &");
+	exec("Rscript R/script_modelagem.R $id $hashId $repetitions $partitions $partitiontype $trainpercent '$buffer' $num_points $tss $threshold_bin '$rasterCSVPath' '$ocorrenciasCSVPath' '$algString' '$ExtentModelPath' '$ProjectionModelPath' '$modelString' &");
 	if (!file_exists($baseUrl . "temp/result/" . $hashId . "/" . $speciesName . ".csv")) {
 		header("Location: cadexperimento.php?op=A&tab=6&MSGCODIGO=77&id=" . $id);
 	} else {

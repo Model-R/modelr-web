@@ -106,7 +106,7 @@ $file = fopen($rasterCSVPath, 'w');
 fputcsv($file, $rasterPathList, ";");
 fclose($file);
 
-exec("Rscript raster-correlation.r " . $id . ' ' . $rasterCSVPath, $a, $b);
+exec("Rscript R/raster-correlation.r " . $id . ' ' . $rasterCSVPath, $a, $b);
 header("Location: cadexperimento.php?op=A&tab=11&MSGCODIGO=86&id=" . $id);
 ?>
 

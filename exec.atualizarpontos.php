@@ -293,7 +293,7 @@ if($idstatus == '4' || $idstatus == '17'){
 	fclose($file);
 	
 	$ocorrenciasCSVPath = $baseUrl . 'temp/'. $idexperimento . '/ocorrencias.csv';
-	exec("Rscript extent-points.r " . $idexperimento . ' ' . $ocorrenciasCSVPath, $a, $b);
+	exec("Rscript R/extent-points.r " . $idexperimento . ' ' . $ocorrenciasCSVPath, $a, $b);
 	$oeste = str_replace('xmin',"",$a[1]);
 	$oeste = str_replace(' ',"",$oeste);
 	$oeste = str_replace(':',"",$oeste);
