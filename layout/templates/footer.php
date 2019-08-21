@@ -6,13 +6,16 @@
 				<div id="partners">
 					<ul class="list-unstyled quick-links">
 						<div class="row">
-							<li><img src="layout/images/capes.PNG" onClick="abrirProjeto('capes')"></img></li>
-							<li><img src="layout/images/cnpq.PNG" onClick="abrirProjeto('cnpq')"></img></li>
-							<li><img src="layout/images/sibbr.png" onClick="abrirProjeto('sibbr')"></img></li>
+							<li style="width:200px"><img src="layout/images/capes.PNG" onClick="abrirProjeto('capes')"></img></li>
+							<li style="width:200px"><img src="layout/images/cnpq.PNG" onClick="abrirProjeto('cnpq')"></img></li>
+						</div>
+						<div class="row">
+							<li style="width:200px"><img src="layout/images/sibbr.png" onClick="abrirProjeto('sibbr')"></img></li>
+							<li style="width:200px"><img src="layout/images/eecbio.png" onClick="abrirProjeto('eecbio')"></img></li>
 						</div>
 						<div  class="row">
-							<li><img src="layout/images/mec.png"></img></li>
-							<li><img src="layout/images/mctic.png"></img></li>
+							<li style="width:200px"><img src="layout/images/mec.png"></img></li>
+							<li style="width:200px"><img src="layout/images/mctic.png"></img></li>
 						</div>
 					</ul>
 				</div>
@@ -24,6 +27,7 @@
 						<div  class="row">
 							<li><img src="layout/images/lncc.png"></img></li>
 							<li><img src="layout/images/s dumont.png"></img></li>
+							<li><img src="layout/images/iis.png"></img></li>
 						</div>
 					</ul>
 				</div>
@@ -73,7 +77,7 @@
 <script>
 function abrirProjeto(projeto) {
 	console.log('e')
-	window.location.replace("https://model-r.jbrj.gov.br/v3/projects.php?projeto=" + projeto);
+	window.location.replace("https://model-r.jbrj.gov.br/projects.php?projeto=" + projeto);
 }
 
 </script>

@@ -95,6 +95,17 @@ Licence URI: http://www.os-templates.com/template-terms
 			disponível no <a href="https://github.com/Model-R">Github</a>.
 			</p>
 
+      <br>
+      <header class="heading">Participação em Redes</header>
+      <p>
+			- Instituto Nacional de Ciência & Tecnologia (INCT) em Ecologia, Evolução e Conservação da Biodiversidade (EECBio).
+      Coordenação José Alexandre Felizola Diniz Filho.
+			</p>
+      <p>
+			- Rede Clima - Biodiversidade e Ecossistemas.
+      Coordenação Mariana Mocassim Vale e Paulo Santos.
+			</p>
+
       </div>
       <!-- ################################################################################################ -->
     </div>
