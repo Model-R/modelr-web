@@ -1,0 +1,17 @@
+extent-point.r
+
+Calcula a extensão do modelo baseado nas coordenadas dos pontos classificados como "Liberado para Modelagem".
+Utilizado automaticamente após a limpeza dos pontos realizadas pelos filtros impelmentados na interface
+
+raster-correlation.r
+
+Calcula a correlação entre as variáveis ambientais selecionadas pelo usuário
+Pode ser utilizado pelo usuário durante o processo de escolha das varáveis ambienteis.
+
+script-modelagem.r
+
+Script reponsável por executar o modelo utilizando o pacote modleR
+
+script_pos.r
+
+Script responsável por realizar o corte no raster utilizando os polígonos desenhados pelo usuário na etapa de pós-processamento da interface
