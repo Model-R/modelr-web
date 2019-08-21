@@ -8,7 +8,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form name="passForm" id="passForm" method="post" action="exec.esqueci.php">
+                <form name="passForm" id="passForm" method="post" action="exec.esquecisenha.php">
                     <div class="form-group">
                         <label for="recipient-name" class="form-control-label">E-mail:</label>
                         <input type="text" class="form-control" name="edtemail" id="edtemail" type="email" require="">
