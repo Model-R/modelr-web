@@ -277,7 +277,7 @@ class Experimento
 	
 	function marcarduplicatas($idexperimento)
 	{
-		$sql = "select * from modelr.occurrence where idexperiment = $idexperimento order by idoccurrence";
+		$sql = "select * from modelr.occurrence where idexperiment = $idexperimento and lat is not null and long is not null order by idoccurrence";
 		$res = pg_exec($this->conn,$sql);
 		while ($row = pg_fetch_array($res))
 		{				
@@ -297,7 +297,7 @@ class Experimento
 	
 	function marcarduplicados($idexperimento)
 	{
-		$sql = "select * from modelr.occurrence where idexperiment = $idexperimento order by idoccurrence";
+		$sql = "select * from modelr.occurrence where idexperiment = $idexperimento and lat is not null and long is not null order by idoccurrence";
 		$res = pg_exec($this->conn,$sql);
 		while ($row = pg_fetch_array($res))
 		{				
@@ -361,9 +361,9 @@ class Experimento
 
 	function adicionarOcorrencia($idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$p,$e,$m,$herbario,$tombo,$codtestemunho,$fonte,$localidade)
 	{	
-		// echo $idexperimento;
-		// exit;
-		
+		if (empty($lat) || $lat == 'undefined' || $lat == 'NA') $lat = 'null';
+		if (empty($long) || $long == 'undefined' || $long == 'NA') $long = 'null';
+
  		$sql = "insert into modelr.occurrence (idexperiment,
 		iddatasource,
 		lat,
@@ -409,8 +409,8 @@ class Experimento
 		// exit;
 		// 8 status occurrence = OK
 		$resultado = pg_exec($this->conn,$sql);
-		//echo $resultado;
-		//echo '<br>';
+		// echo $resultado;
+		// echo '<br>';
 		//echo '<br>';
 		//exit;
 		

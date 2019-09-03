@@ -7,6 +7,7 @@ $usuarioreflora = 5; // id tipo usuario reflora;
 header('Access-Control-Allow-Origin: *'); 
 header('Access-Control-Allow-Origin: http://php7.jbrj.gov.br');
 header("Access-Control-Allow-Headers: Content-Type");
+header("Content-type: text/html; charset=UTF-8");
 
 require_once('classes/conexao.class.php');
 require_once('classes/experimento.class.php');
@@ -216,7 +217,7 @@ if ($op=='A')
         //2 Gbif
         if ((!empty($especie)) && ($_REQUEST['fontebiotico'][0]=='1'))
         {
-			$ws = file_get_contents("https://model-r.jbrj.gov.br/execjabot.php?especie=" . $especie);
+			$ws = file_get_contents("https://model-r.jbrj.gov.br/modelr-web/execjabot.php?especie=" . $especie);
         } // if ((!empty($especie)) && ($_REQUEST['fontebiotico'][0]=='JABOT'))
 	?>
 
@@ -389,7 +390,7 @@ function jabot (gbifTaxonKey) {
 	};
 	
 	if(document.getElementById('checkfontejabot').checked==true){
-		xmlhttp.open("GET", <?php echo "'https://model-r.jbrj.gov.br/execjabot.php?especie=" . $especie . "'"; ?>, true);
+		xmlhttp.open("GET", <?php echo "'https://model-r.jbrj.gov.br/modelr-web/execjabot.php?especie=" . $especie . "'"; ?>, true);
 		xmlhttp.send();
 	} else {
 		//gbif(gbifTaxonKey, [])
@@ -527,7 +528,6 @@ async function printData(gbifData, jabotData, HVdata = [])
 	
 	if(document.getElementById('checkfontehv').checked==true){
 		HVdata = await getHV(especie);
-		console.log(HVdata[0])
 		for (i = 0; i < HVdata.length; i++) {
 			//alert(i);
 			try {		
@@ -609,7 +609,7 @@ function getAllGbif (taxonKey, offset, results, jabotData) {
 				}
 			};
 		}
-		xmlhttp.open("GET", "https://api.gbif.org/v1/occurrence/search?taxonKey="+taxonKey+'&hasCoordinate=true&limit=300&offset='+offset, true);
+		xmlhttp.open("GET", "https://api.gbif.org/v1/occurrence/search?taxonKey="+taxonKey+'&limit=300&offset='+offset, true);
 		xmlhttp.send();
 	}
 }
@@ -842,16 +842,25 @@ $('#checkfontehv').on('change', function() {
 function getHV(sp)
 {
 	return new Promise(function(resolve, reject) {
-		xmlhttp=new XMLHttpRequest();
-		xmlhttp.onreadystatechange=function()  {
-			if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-				var data = xmlhttp.response;
-				console.log(data)
-				resolve(JSON.parse(data));
+		$.get('searchRefloraIPT.php?expid=' + <?php echo $id;?> + '&sp=' + sp, function(data, status){
+			for(let u of unicode){
+				var regex = new RegExp(`\<${u.code}\>`, "g");
+				data = data.replace(regex,u.char)
 			}
-		}
-		xmlhttp.open("GET",'searchRefloraIPT.php?expid=' + <?php echo $id;?> + '&sp=' + sp,true);
-		xmlhttp.send();
+			resolve(JSON.parse(data));
+		});
+		// xmlhttp=new XMLHttpRequest();
+		// xmlhttp.onreadystatechange=function()  {
+		// 	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		// 		var data = xmlhttp.response;
+		// 		console.log(JSON.parse(data)[0]);
+		// 		console.log('\n---------------------\n')
+		// 		resolve(JSON.parse(data));
+		// 	}
+		// }
+		// xmlhttp.open("GET",'searchRefloraIPT.php?expid=' + <?php echo $id;?> + '&sp=' + sp,true);
+		// xmlhttp.overrideMimeType('text/xml; charset=UTF-8');
+		// xmlhttp.send();
 	});
 }
 
@@ -859,6 +868,7 @@ function printHV (data) {
 	var body = '';
 	//print gbif
 	contador = 0;
+	console.log(data[0])
 	exibe('loading','Buscando Ocorrências');
 	for (i = 0; i < data.length; i++) {
 		//alert(i);
@@ -875,7 +885,7 @@ function printHV (data) {
 			numcoleta = data[i].recordNumber;
 			pais = data[i].country;
 			estado = data[i].stateProvince;
-			cidade = data[i].municipality;
+			cidade = data[i].municipality.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
 			herbario = data[i].collectionCode;
 			localidade = data[i].locality;
 			
@@ -915,12 +925,151 @@ function printHV (data) {
 
 function extractComponents (url) {
 	//server
-	var server = url.match(new RegExp('http://' + "(.*)" + '/fsi'))[1];
-	var path_file = url.match(new RegExp('source=' + "(.*)"))[1];
+	if(url.indexOf('|')) url = url.split('|')[0];
+	var server = url.match(new RegExp('http://' + "(.*)" + '/fsi')) || url.match(new RegExp("(.*)" + '/fsi'));
+	if(server && server.length) server = server[1];
+	else server='';
+	var path_file = url.match(new RegExp('source=' + "(.*)"));
+	if(path_file && path_file.length) path_file = path_file[1];
+	else path_file = ''
 	path_file = path_file.split('/');
 	var path = path_file.slice(0, -1).join('/');
 	var file = path_file.slice(-1)[0]
-
 	return { 'server': server, 'path': path, 'file':file}; 
 }
+
+var unicode = [
+  {
+    "code": "U\\+00C0",
+    "char": "À"
+  },
+  {
+    "code": "U\\+00C1",
+    "char": "Á"
+  },
+  {
+    "code": "U\\+00C2",
+    "char": "Â"
+  },
+  {
+    "code": "U\\+00C3",
+    "char": "Ã"
+  },
+  {
+    "code": "U\\+00C4",
+    "char": "Ä"
+  },
+  {
+    "code": "U\\+00C5",
+    "char": "Å"
+  },
+  {
+    "code": "U\\+00C7",
+    "char": "Ç"
+  },
+  {
+    "code": "U\\+00C8",
+    "char": "È"
+  },
+  {
+    "code": "U\\+00C9",
+    "char": "É"
+  },
+  {
+    "code": "U\\+00CA",
+    "char": "Ê"
+  },
+  {
+    "code": "U\\+00CB",
+    "char": "Ë"
+  },
+  {
+    "code": "U\\+00CC",
+    "char": "Ì"
+  },
+  {
+    "code": "U\\+00CD",
+    "char": "Í"
+  },
+  {
+    "code": "U\\+00CE",
+    "char": "Î"
+  },
+  {
+    "code": "U\\+00CF",
+    "char": "Ï"
+  },
+  {
+    "code": "U\\+00D2",
+    "char": "Ò"
+  },
+  {
+    "code": "U\\+00D3",
+    "char": "Ó"
+  },
+  {
+    "code": "U\\+00D4",
+    "char": "Ô"
+  },
+  {
+    "code": "U\\+00D5",
+    "char": "Õ"
+  },
+  {
+    "code": "U\\+00DA",
+    "char": "Ú"
+  },
+  {
+    "code": "U\\+00E0",
+    "char": "à"
+  },
+  {
+    "code": "U\\+00E1",
+    "char": "á"
+  },
+  {
+    "code": "U\\+00E2",
+    "char": "â"
+  },
+  {
+    "code": "U\\+00E3",
+    "char": "ã"
+  },
+  {
+    "code": "U\\+00E4",
+    "char": "ä"
+  },
+  {
+    "code": "U\\+00E7",
+    "char": "ç"
+  },
+  {
+    "code": "U\\+00E9",
+    "char": "é"
+  },
+  {
+    "code": "U\\+00EA",
+    "char": "ê"
+  },
+  {
+    "code": "U\\+00ED",
+    "char": "í"
+  },
+  {
+    "code": "U\\+00F3",
+    "char": "ó"
+  },
+  {
+    "code": "U\\+00F4",
+    "char": "ô"
+  },
+  {
+    "code": "U\\+00F5",
+    "char": "õ"
+  },
+  {
+    "code": "U\\+00FA",
+    "char": "ú"
+  }
+]
 </script>

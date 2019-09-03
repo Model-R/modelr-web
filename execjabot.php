@@ -9,8 +9,8 @@ $especie = $_REQUEST['especie'];
 $sql = "select numtombo,taxoncompleto,codtestemunho,coletor,numcoleta,latitude,longitude,
         pais,estado_prov as estado,cidade as municipio, siglacolecao as herbario, descrlocal as localidade
             from  
-        publicacao.extracao_jabot_geral where latitude is not null and longitude is not null and
-        familia || ' ' || taxoncompleto ilike '%".$especie."%'";
+		publicacao.extracao_jabot_geral where familia || ' ' || taxoncompleto ilike '%".$especie."%'";
+
 $res = pg_exec($conn,$sql);
 $totalregistroselecionados = pg_num_rows($res); 
 

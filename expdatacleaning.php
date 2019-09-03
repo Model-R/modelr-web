@@ -108,7 +108,7 @@ if ($op=='A')
 						
 						<div class="col-md-8 col-sm-8 col-xs-8">
 							<b>Dados inferidos</b><br>
-							<?php echo $StatusOccurrence->listaCombo('cmboxstatusoccurrence',$idstatusoccurrence,'N','class="form-control"','12,4,6,8,10,11,12,13,17,18,19,20');?>
+							<?php echo $StatusOccurrence->listaCombo('cmboxstatusoccurrence',$idstatusoccurrence,'N','class="form-control"','12,4,5,6,8,10,11,12,13,17,18,19,20');?>
 							<div class="row">
 								<div class="col-md-6 col-sm-6 col-xs-6">
 									Latitude:<input type="text" name="edtlatitude" id="edtlatitude" class="form-control"><br>
@@ -208,6 +208,7 @@ if ($op=='A')
 									valores iguais para os campos taxon, coletor, número de coleta, latitude e longitude.">Duplicatas</button>
             <button id="send4" type="button" onclick="marcarPontosDuplicados()" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Filtrar duplicatas">Duplicadas</button>
 			<button id="send2" type="button" onclick="atualizarPontos('',2,'','',false)" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Filtrar pontos fora do município coletado">Fora Município coleta</button>
+			<button id="send2" type="button" onclick="atualizarPontos('',3,'','',false)" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Georreferenciar ocorrências sem coordenadas">Georreferenciar Ocorrências</button>
 			<button id="send3" type="button" onclick="atualizarPontos('',99,'','',false)" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Executar todos os filtros">Executar Todos</button>
             <!--<button id="send3" type="button" onclick="atualizarPontos('',11,'','',false)" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Filtrar pontos no mar">Coordenada no mar</button>
             <button id="send3" type="button" onclick="atualizarPontos('',12,'','',false)" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title data-original-title="Filtrar pontos com coordenada invertida">Coordenada invertida</button>
@@ -399,7 +400,7 @@ function initMapModal(idocorrencia) {
 	
 	eraseMarkers(map4);
 
-  	var markers = [<?php echo $marker;?>];
+	  var markers = [<?php echo $marker;?>];
     for( i = 0; i < markers.length; i++ ) {
 		if(markers[i][3] != idocorrencia) continue; //only print clicked ocurrence
         var marker = printMarker (map4, [markers[i][1], markers[i][2]], markers[i][7], true);
@@ -619,9 +620,9 @@ google.maps.event.addDomListener(window, 'load', initMap);
     var map3 = startMap('map3', [-24.5452, -42.5389], 2)
     
   	var markers = [<?php echo $marker;?>];
-    
     // Loop through our array of markers & place each one on the map  
     for( i = 0; i < markers.length; i++ ) {
+		if(markers[i][1] == null || markers[i][2] == null) continue;
         var marker = printMarker (map3, [markers[i][1], markers[i][2]], markers[i][7]);
         marker.on('click', (function(marker, i) {
             return function() {

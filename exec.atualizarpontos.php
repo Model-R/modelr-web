@@ -17,7 +17,7 @@ $idstatus = $_REQUEST['idstatus'];
 $latinf = $_REQUEST['latinf'];
 $longinf = $_REQUEST['longinf'];
 
-print_r($_REQUEST);
+// print_r($_REQUEST);
 
 if(dirname(__FILE__) != '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
@@ -57,7 +57,17 @@ $lista = $idponto;
 
 $MSGCODIGO = 19;
 
-if (($latinf != 'undefined') && (!empty($latinf)) || ($longinf != 'undefined') && (!empty($longinf)))
+if ($latinf === '0' || $longinf === '0') {
+	foreach($lista as $idponto){
+		$sql = "update modelr.occurrence set idstatusoccurrence=$idstatus,lat2=$latinf, long2=$longinf ";
+		
+		$sql.="	where
+		idoccurrence = $idponto";
+		$res = pg_exec($conn,$sql);
+
+	}
+}
+else if ((($latinf != 'undefined') && (!empty($latinf))) || (($longinf != 'undefined') && (!empty($longinf))))
 {
 	//$Experimento->excluirPonto($idexperimento,$idponto,$idstatus,$latinf,$longinf);
 	foreach($lista as $idponto){
@@ -101,6 +111,34 @@ else
 			idexperiment = ".$idexperimento;
 		$MSGCODIGO = 73;
 		$res = pg_exec($conn,$sql);
+	}
+
+	// georreferenciar coordenadas
+	if (($idstatus=='3') || ($idstatus=='99'))
+	{
+		$sql = "select * from modelr.occurrence where idexperiment = ".$idexperimento." and idstatusoccurrence <> 13 and lat is null and long is null";
+		$res = pg_exec($conn,$sql);
+		// echo $sql;
+		// echo '<br>';
+		while ($row = pg_fetch_array($res))
+		{	
+			// print_r($row);
+			// echo '<br>';
+			$sql2 = "select * from base_geografica.\"municipios_2014\" shape where LOWER(shape.nm_mun) = '".strtolower($row['minorarea'])."'";
+			// echo $sql2;
+			// echo '<br>';
+			$res2 = pg_exec($conn,$sql2);
+			while ($row3 = pg_fetch_array($res2))
+			{	
+				// print_r($row3);
+				// echo '<br>';
+				$sql4 = "update modelr.occurrence set idstatusoccurrence=5, lat2 = ".$row3['y_mun'].", long2 = ".$row3['x_mun']."
+						where idoccurrence = ".$row['idoccurrence'];
+				// echo $sql4;
+				// echo '<br>';
+				$res4 = pg_exec($conn,$sql4);
+			}
+		}
 	}
 	
 	// fora do limite do brasil

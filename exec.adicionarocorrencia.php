@@ -32,9 +32,7 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 //if ($fontedados==1)
 //{
 	$sql = "select numtombo,taxoncompleto,codtestemunho,coletor,numcoleta,latitude,longitude,pais,estado_prov as estado,cidade as municipio, siglacolecao as herbario, descrlocal as localidade
-			from  
-								publicacao.extracao_jabot_geral where latitude is not null and longitude is not null and
-        familia || ' ' || taxoncompleto ilike '%".$especie."%' and ";
+			from publicacao.extracao_jabot_geral where familia || ' ' || taxoncompleto ilike '%".$especie."%' and ";
 
 	$box=$jabotData;
 	$in = 'extracao_jabot_geral.codtestemunho in (';

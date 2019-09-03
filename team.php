@@ -12,7 +12,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-<link href="layout/styles/styleTeam.css" rel="stylesheet" type="text/css" media="all">
+<link href="layout/styles/style-team.css" rel="stylesheet" type="text/css" media="all">
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -79,7 +79,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <h5 class="section-title h1">Equipe</h5>
     <div class="container">
 	
-		<div class="d-md-flex h-md-100 align-items-center">
+		<div class="d-md-flex h-md-100">
 
 			<!-- First Half -->
 
@@ -194,11 +194,11 @@ Licence URI: http://www.os-templates.com/template-terms
 					<!-- ./Team member -->
 				</div>
 			</div>
-
+				
 			<!-- Second Half -->
 
 			<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-				<h3 class="role-title" onClick="toggleTeam('bolsistas')">Bolsistas</h3>
+				<h3 class="role-title" onClick="toggleTeam('bolsistas')">Pesquisadores</h3>
 				<div id="bolsistas" class="row">
 					<!-- Team member -->
 					<div class="col-xs-12 col-sm-6 col-md-4">
