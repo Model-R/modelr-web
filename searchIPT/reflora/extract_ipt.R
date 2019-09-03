@@ -117,7 +117,7 @@ for(url in extracted_urls){
   hm <- out$data
   data <- select(hm$occurrence.txt, one_of(columns))
   data$recordNumber <- as.character(data$recordNumber) 
-  ocurrences_list[[i]] = filter(data, !is.na(decimalLatitude) & !is.na(decimalLongitude))
+  ocurrences_list[[i]] = data
   i = i + 1
 }
 

@@ -1,5 +1,6 @@
 library(stringr)
 library(dplyr)
+library(plyr)
 
 args <- commandArgs(TRUE)
 experiment_id <- args[1]
@@ -29,9 +30,9 @@ for(list in read_ocurrence_list){
 }
 
 total
-compiled_ocurrence_list = bind_rows(filtered_ocurrences_list)
+compiled_ocurrence_list = rbind.fill(filtered_ocurrences_list)
+head(compiled_ocurrence_list)
 write.csv(compiled_ocurrence_list, 
             file = paste0(folder_path, sp, "_ocurrence_list-exp", experiment_id, ".csv"), 
             sep=",",
-            row.names=FALSE,
-            fileEncoding = "UTF-8")
+            row.names=FALSE)

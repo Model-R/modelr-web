@@ -1,7 +1,10 @@
+
 <?php 
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors','1');
+header('Content-type: text/html; charset=utf-8');
+setlocale( LC_ALL, 'pt_BR.utf-8', 'pt_BR', 'Portuguese_Brazil');
 
 if(dirname(__FILE__) != '/var/www/html/rafael/modelr'){
 	$baseUrl = '../';
@@ -20,7 +23,7 @@ exec("Rscript  searchIPT/reflora/search_inside_ipts.R $expid '$sp'", $a, $b);
 
 $json = getJsonFromCsv($baseUrl . "../modelr-data/ipt/reflora/searches/" . $sp . "_ocurrence_list-exp" . $expid . ".csv", ',');
 echo $json;
-
+exit;
 function getJsonFromCsv($file,$delimiter) { 
     if (($handle = fopen($file, 'r')) === false) {
         die('Error opening file');
@@ -34,6 +37,6 @@ function getJsonFromCsv($file,$delimiter) {
     }
 
     fclose($handle);
-    return json_encode($csv2json); 
+    return json_encode($csv2json, JSON_UNESCAPED_UNICODE); 
 }
 ?>

@@ -10,12 +10,14 @@ cat(file.path(getwd(), "searchIPT/reflora/extract_ipt.R"))
 extract_ipt_script <- file.path(getwd(), "searchIPT/reflora/extract_ipt.R")
 cmd <- cron_rscript(extract_ipt_script)
 
+cron_ls()
 cron_clear(ask=FALSE)
-cron_add(command = cmd, frequency = 'weekly',
-         id = 'extract_data_from_ipts_weekly',
-         description = 'Extracting data from reflora IPTs every week',
-         at='2AM',
-         days_of_week = c(0))
+cron_add(command = cmd, frequency = 'daily', at='2AM', id = 'extract_data_from_ipts_daily')
+# cron_add(command = cmd, frequency = 'weekly',
+#          id = 'extract_data_from_ipts_weekly',
+#          description = 'Extracting data from reflora IPTs every week',
+#          at='2AM',
+#          days_of_week = c(0))
 
 ##############
 ## End Unix ##
