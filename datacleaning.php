@@ -260,7 +260,13 @@ $info = '';
 								$arquivo =  $row['file'];
 								$localizacao = $row['country'].', '.$row['majorarea'].' - '.$row['minorarea'];
 								
-								$html_imagem='<a href=templaterb2.php?colbot=rb&codtestemunho='.$row['codtestemunho'].'&arquivo='.$arquivo.' target=\"Visualizador\"><img src="http://'.$servidor.'/fsi/server?type=image&source='.$path.'/'.$arquivo.'&width=300&height=100&profile=jpeg&quality=20"></a>';
+								if($row['fonte'] == 'SpeciesLink') {
+									$html_imagem='<a href=http://reflora-cdc.cria.org.br/inct/exsiccatae/viewer/imagecode/'.$path.'/format/slide/foo/48941 target=\'Visualizador\'><img src=http://reflora-cdc.cria.org.br/inct/exsiccatae/image/imagecode/'.$path.'/size/thumb/format/jpeg/foo/48941></a>';
+									echo $html_imagem;
+								} else {
+									echo '1';
+									$html_imagem='<a href=templaterb2.php?colbot=rb&codtestemunho='.$row['codtestemunho'].'&arquivo='.$arquivo.' target=\"Visualizador\"><img src="http://'.$servidor.'/fsi/server?type=image&source='.$path.'/'.$arquivo.'&width=300&height=100&profile=jpeg&quality=20"></a>';
+								}
 								
 								// preparo os quadros de informação para cada ponto
 								$c++;

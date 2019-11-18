@@ -11,7 +11,7 @@ $Experimento->conn = $conn;
 
 $idexperimento = $_REQUEST['id'];
 $especie = $_REQUEST['edtespecie'];
-$fontedados = $_REQUEST['fontebiotico'][0];
+$fontedados = isset($_REQUEST['fontebiotico']) ? $_REQUEST['fontebiotico'][0] : NULL;
 
 $Experimento->getById($idexperimento);
 $bool_automaticfilter = $_REQUEST['filtro'];
@@ -25,7 +25,8 @@ while (list ($key,$val) = @each($box)) {
 		array_push($gbifData,$val);
 	}
 }
-
+print_r($box);
+exit;
 $bool_automaticfilter = $bool_automaticfilter === 'true'? true: false;
 $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 
@@ -86,9 +87,9 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		//$result = $Cobertura->excluir($val);
 		$val = explode("*", $val);
 		//echo $val.'<br>';
-		//print_r($val);
 		//echo '<br>';
 		$idexperimento = $val[0];
+		$fontedados = $val[1];
 		$latitude = $val[2];
 		$longitude = $val[3];
 		$taxon = str_replace("'","`",$val[4]);
@@ -116,11 +117,13 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		} else {
 			$tombo = 'null';
 		}
-		$localidade= str_replace("'","`",$val[15]);
+		$localidade= $val[15] ? str_replace("'","`",$val[15]) : '';
 		if(empty($herbario)){
 			$fonte = 'CSV';
 		} else if($fontedados == 4) {
 			$fonte = 'HV';
+		} else if($fontedados == 5) {
+			$fonte = 'SpeciesLink';
 		} 
 		else {
 			$fonte = 'GBIF';
@@ -129,7 +132,7 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 	} 
 	
 //}
-
+exit;
 if($bool_automaticfilter === true){
 	header("Location: exec.atualizarpontos.php?idstatus=99&idponto=&latinf=&longinf=&id=$idexperimento");
 } else {

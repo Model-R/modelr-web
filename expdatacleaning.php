@@ -306,7 +306,9 @@ while ($row = pg_fetch_array($res))
     
     if($row['iddatasource'] == 4) { //imagem hv
         $html_imagem='<a href=templatehv.php?path='.$path.'/'.$arquivo.' target=\"Visualizador\"><img src="http://'.$servidor.'/fsi/server?type=image&source='.$path.'/'.$arquivo.'&width=300&height=70&profile=jpeg&quality=20"></a>';
-    } else {
+	} else if ($row['iddatasource'] == 5) { //imagem specieslink
+		$html_imagem='<a href=http://reflora-cdc.cria.org.br/inct/exsiccatae/viewer/imagecode/'.$path.'/format/slide/foo/48941 target=\'Visualizador\'><img src=http://reflora-cdc.cria.org.br/inct/exsiccatae/image/imagecode/'.$path.'/size/thumb/format/jpeg/foo/48941></a>';
+	} else {
         $html_imagem='<a href=templaterb2.php?colbot=rb&codtestemunho='.$row['codtestemunho'].'&arquivo='.$arquivo.' target=\"Visualizador\"><img src="http://'.$servidor.'/fsi/server?type=image&source='.$path.'/'.$arquivo.'&width=300&height=70&profile=jpeg&quality=20"></a>';
     }
 	
@@ -429,7 +431,9 @@ function abreModal(taxon,lat,lng,idocorrencia,latinf,lnginf,servidor,path,arquiv
    document.getElementById('divtaxon').innerHTML=taxon;
     if(datasource == 4){
         html_imagem='<a href=templatehv.php?path='+path+'/'+arquivo+' target=\"Visualizador\"><img src="http://'+servidor+'/fsi/server?type=image&source='+path+'/'+arquivo+'&width=100&height=150&profile=jpeg&quality=20"></a>';  
-    } else {
+    } else if (datasource == 5) { //imagem specieslink
+		html_imagem='<a href=http://reflora-cdc.cria.org.br/inct/exsiccatae/viewer/imagecode/'+path+'/format/slide/foo/48941 target=\'Visualizador\'><img src=http://reflora-cdc.cria.org.br/inct/exsiccatae/image/imagecode/'+path+'/size/thumb/format/jpeg/foo/48941></a>';
+	} else {
 	    html_imagem='<a href=templaterb2.php?colbot=rb&codtestemunho=&arquivo='+arquivo+' target=\"Visualizador\"><img src="http://'+servidor+'/fsi/server?type=image&source='+path+'/'+arquivo+'&width=600&height=200&profile=jpeg&quality=20"></a>';
     }
 	document.getElementById('edidocorrencia').value=idocorrencia;

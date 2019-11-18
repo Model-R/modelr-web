@@ -142,6 +142,7 @@ if ($op=='A')
                     <div><input type="checkbox" name="fontebiotico[]" id="checkfontegbif" value="2" <?php if (in_array('2', $_REQUEST['fontebiotico'])) echo "checked";?>/> GBIF</div>
                     <!--<div><input type="radio" disabled name="fontebiotico[]" id="checkfontesibbr" value="2" <?php if ($_REQUEST['fontebiotico'][0]=='3') echo "checked";?>/> SiBBr</div>-->
 					<div><input type="checkbox" name="fontebiotico[]" id="checkfontehv" value="4" <?php if (in_array('4', $_REQUEST['fontebiotico'])) echo "checked";?>/> HV</div>
+					<div><input type="checkbox" name="fontebiotico[]" id="checkfontespecieslink" value="5" <?php if (in_array('5', $_REQUEST['fontebiotico'])) echo "checked";?>/> Species Link</div>
                     <div><input disabled type="checkbox" name="fontebiotico[]" id="checkfontesibbr" value="3" <?php if ($_REQUEST['fontebiotico'][0]=='3') echo "checked";?>/> SiBBr</div>
 					<div><input <?php if ($_SESSION['s_idtipousuario']==$usuarioreflora){ echo "disabled" ;} ?> type="checkbox" name="fontebiotico[]" id="checkfontecsv" value="3" <?php if ($_REQUEST['fontebiotico'][0]=='3') echo "checked";?>/> CSV</div>
                 </div>
@@ -379,6 +380,7 @@ function jabot (gbifTaxonKey) {
     var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
+			//console.log(this.responseText)
 			if(gbifTaxonKey && this.responseText != ']') getAllGbif(gbifTaxonKey, 0, [], JSON.parse(this.responseText))
 			else if(gbifTaxonKey && this.responseText == ']') getAllGbif(gbifTaxonKey, 0, [], [])
 			else if (!gbifTaxonKey && this.responseText == ']'){
@@ -405,7 +407,7 @@ function printJabotOnly(jabotData){
 	var body = '';		
 	//print jabot
 	exibe('loading','Buscando Ocorrências');
-	console.log(jabotData[0])
+	//console.log(jabotData[0])
 	for (i = 0; i < jabotData.length; i++) {
 		//alert(i);
 		longitude = jabotData[i].longitude;
@@ -449,7 +451,7 @@ function printJabotOnly(jabotData){
 }
 
 //function gbif(taxonKey, jabotData)
-async function printData(gbifData, jabotData, HVdata = [])
+async function printData(gbifData, jabotData, HVdata = [], spLinkData = [])
 {		
 
 	var body = '';
@@ -548,7 +550,7 @@ async function printData(gbifData, jabotData, HVdata = [])
 				
 				//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 				var idexperimento = document.getElementById('id').value;
-				var imageComponents = extractComponents(HVdata[i].associatedMedia.replace('imagens1','imagens4'));
+				var imageComponents = extractComponents(HVdata[i].associatedMedia);
 				var html_imagem='<a href=templatehv.php?path='+imageComponents.path + '/' + imageComponents.file+' target=\'Visualizador\'><img src='+HVdata[i].associatedMedia.replace('imagens1','imagens4')+'&width=100&height=150></a>';
 				//split * 
 				var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
@@ -564,7 +566,50 @@ async function printData(gbifData, jabotData, HVdata = [])
 					body +='<td class=" ">'+cidade+'</td>';
 					body +='<td class=" ">'+localidade+'</td>';
 			} catch (error) {
-				console.log(error)
+				//console.log(error)
+			}
+		}
+	}
+
+	if(document.getElementById('checkfontespecieslink').checked==true){
+		spLinkData = await getSpeciesLink(especie);
+		for (i = 0; i < spLinkData.length; i++) {
+			//alert(i);
+			try {		
+				longitude = spLinkData[i].decimalLongitude;
+				latitude = spLinkData[i].decimalLatitude;
+	
+				//if (longitude == 'NA' || latitude == 'NA') continue;
+	
+				taxon = spLinkData[i].genus + ' ' + spLinkData[i].specificEpithet;
+				tombo = spLinkData[i].catalogNumber;
+				coletor = spLinkData[i].recordedBy;
+				numcoleta = spLinkData[i].recordNumber;
+				pais = spLinkData[i].country;
+				estado = spLinkData[i].stateProvince;
+				cidade = spLinkData[i].county;
+				herbario = spLinkData[i].collectionCode;
+				localidade = spLinkData[i].locality;
+				imagecode = spLinkData[i].imagecode;
+			
+				//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
+				var html_imagem='<a href=http://reflora-cdc.cria.org.br/inct/exsiccatae/viewer/imagecode/'+ imagecode+'/format/slide/foo/48941 target=\'Visualizador\'><img src=http://reflora-cdc.cria.org.br/inct/exsiccatae/image/imagecode/'+imagecode+'/size/thumb/format/jpeg/foo/48941></a>';
+			
+				//split * 
+				var Jval = idexperimento + '*5*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'**'+imagecode+'**'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
+					body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
+					body +='<td class=" ">'+html_imagem+ ' ' + taxon+'</td>';
+					body +='<td class="a-right a-right ">SpeciesLink</td>';
+					body +='<td class="a-right a-right ">'+herbario+'</td>';
+					body +='<td class="a-right a-right ">'+tombo+'</td>';
+					body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
+					body +='<td class=" ">'+latitude+', '+longitude+'</td>';
+					body +='<td class=" ">'+pais+'</td>';
+					body +='<td class=" ">'+estado+'</td>';
+					body +='<td class=" ">'+cidade+'</td>';
+					body +='<td class=" ">'+localidade+'</td>';
+			} catch (error) {
+				//console.log(error)
 			}
 		}
 	}
@@ -577,14 +622,9 @@ async function printData(gbifData, jabotData, HVdata = [])
 	table += '<th class="column-title">País</th><th class="column-title">Estado</th><th class="column-title">Município</th><th class="column-title">Localidade</th>';
 	table += '<a class="antoo" style="color:#fff; font-weight:500;">Total de Registros selecionados: ( <span class="action-cnt"> </span> ) </a>';
 	table += '</th></tr></thead>';
-	table += '<tbody><td class="a-center total-busca" colspan=11>Total:' + (jabotData.length + gbifData.length + HVdata.length)  + '</td>'+body+'</tbody></table>';
+	table += '<tbody><td class="a-center total-busca" colspan=11>Total:' + (jabotData.length + gbifData.length + HVdata.length + spLinkData.length)  + '</td>'+body+'</tbody></table>';
 	table += '';
 		
-//			x += '('+myObj.results[i]['decimalLongitude'] + ', '+myObj.results[i]['decimalLongitude']+ ')';
-//		}
-
-//		decimalLongitude":-41.336139,"decimalLatitude
-	
 	document.getElementById("div_resultadobusca").innerHTML = table;
 	
 }
@@ -616,11 +656,12 @@ function getAllGbif (taxonKey, offset, results, jabotData) {
 
 function adicionarOcorrencia()
 {	
+    console.log($("#frm2").serialize());
 	if (contaSelecionados(document.getElementsByName('chtestemunho[]'))>0 && !multipleSpecies)
 	{
 		exibe('loading','Adicionando Ocorrências');
-		document.getElementById('frm2').action='exec.adicionarocorrencia.php?filtro=' + document.getElementById('edtfiltroautomatico').checked;
-		document.getElementById('frm2').submit();
+		// document.getElementById('frm2').action='exec.adicionarocorrencia.php?filtro=' + document.getElementById('edtfiltroautomatico').checked;
+		// document.getElementById('frm2').submit();
 	}
     else if(contaSelecionados(document.getElementsByName('chtestemunho[]'))>0 && multipleSpecies){
 		$('#multSpeciesModal').modal('show');
@@ -774,6 +815,7 @@ async function buscar()
 			document.getElementById('checkfontegbif').checked==false && 
 			document.getElementById('checkfontesibbr').checked==false &&
 			document.getElementById('checkfontehv').checked==false &&
+			document.getElementById('checkfontespecieslink').checked==false &&
 			document.getElementById('checkfontecsv').checked==false) {
 			criarNotificacao('Atenção','Selecione pelo menos uma fonte de dados.','warning')
 	 }
@@ -796,6 +838,11 @@ async function buscar()
 			var data = await getHV(texto);
 			printHV(data)
 		 }
+		 else if (document.getElementById('checkfontespecieslink').checked==true){
+			var spLinkData = await getSpeciesLink(texto);
+			//console.log('data',spLinkData)
+			printSpeciesLink(spLinkData)
+		 }
          else printCSV(file);
      }
 	 //exibe('loading','Buscando Ocorrências');
@@ -817,6 +864,7 @@ $('#checkfontecsv').on('change', function() {
         document.getElementById('checkfontejabot').checked = false;
         document.getElementById('checkfontegbif').checked = false;
 		document.getElementById('checkfontehv').checked = false
+		document.getElementById('checkfontespecieslink').checked = false
     }
 });
 
@@ -839,6 +887,12 @@ $('#checkfontehv').on('change', function() {
 });
 
 
+$('#checkfontespecieslink').on('change', function() {
+    if(document.getElementById('checkfontespecieslink').checked){
+        document.getElementById('checkfontecsv').checked = false;
+    }
+});
+
 function getHV(sp)
 {
 	return new Promise(function(resolve, reject) {
@@ -849,18 +903,6 @@ function getHV(sp)
 			}
 			resolve(JSON.parse(data));
 		});
-		// xmlhttp=new XMLHttpRequest();
-		// xmlhttp.onreadystatechange=function()  {
-		// 	if (xmlhttp.readyState==4 && xmlhttp.status==200) {
-		// 		var data = xmlhttp.response;
-		// 		console.log(JSON.parse(data)[0]);
-		// 		console.log('\n---------------------\n')
-		// 		resolve(JSON.parse(data));
-		// 	}
-		// }
-		// xmlhttp.open("GET",'searchRefloraIPT.php?expid=' + <?php echo $id;?> + '&sp=' + sp,true);
-		// xmlhttp.overrideMimeType('text/xml; charset=UTF-8');
-		// xmlhttp.send();
 	});
 }
 
@@ -868,7 +910,7 @@ function printHV (data) {
 	var body = '';
 	//print gbif
 	contador = 0;
-	console.log(data[0])
+	//console.log(data[0])
 	exibe('loading','Buscando Ocorrências');
 	for (i = 0; i < data.length; i++) {
 		//alert(i);
@@ -891,7 +933,7 @@ function printHV (data) {
 			
 			//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
 			var idexperimento = document.getElementById('id').value;
-			var imageComponents = extractComponents(data[i].associatedMedia.replace('imagens1','imagens4'));
+			var imageComponents = extractComponents(data[i].associatedMedia);
 			var html_imagem='<a href=templatehv.php?path='+imageComponents.path + '/' + imageComponents.file+' target=\'Visualizador\'><img src='+data[i].associatedMedia.replace('imagens1','imagens4')+'&width=100&height=150></a>';
 			//split * 
 			var Jval = idexperimento + '*4*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'*'+imageComponents.server+'*'+imageComponents.path+'*'+imageComponents.file+'*'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
@@ -907,7 +949,7 @@ function printHV (data) {
 				body +='<td class=" ">'+cidade+'</td>';
 				body +='<td class=" ">'+localidade+'</td>';
 		} catch (error) {
-			console.log(error)
+			//console.log(error)
 		}
 	}
 	
@@ -923,8 +965,92 @@ function printHV (data) {
 	document.getElementById("div_resultadobusca").innerHTML = table;
 }
 
+function printSpeciesLink (data) {
+	var body = '';
+	//print gbif
+	contador = 0;
+	//console.log(data[0])
+	exibe('loading','Buscando Ocorrências');
+	for (i = 0; i < data.length; i++) {
+		//alert(i);
+		try {		
+			longitude = data[i].decimalLongitude;
+			latitude = data[i].decimalLatitude;
+
+			//if (longitude == 'NA' || latitude == 'NA') continue;
+
+			contador = contador + 1;
+			taxon = data[i].genus + ' ' + data[i].specificEpithet;
+			tombo = data[i].catalogNumber;
+			coletor = data[i].recordedBy;
+			numcoleta = data[i].recordNumber;
+			pais = data[i].country;
+			estado = data[i].stateProvince;
+			cidade = data[i].county;
+			herbario = data[i].collectionCode;
+			localidade = data[i].locality;
+			imagecode = data[i].imagecode;
+			
+			//$idexperimento,$idfontedados,$lat,$long,$taxon,$coletor,$numcoleta,$imagemservidor,$imagemcaminho,$imagemarquivo,$pais,$estado,$municipio
+			var idexperimento = document.getElementById('id').value;
+			var html_imagem='<a href=http://reflora-cdc.cria.org.br/inct/exsiccatae/viewer/imagecode/'+ imagecode+'/format/slide/foo/48941 target=\'Visualizador\'><img src=http://reflora-cdc.cria.org.br/inct/exsiccatae/image/imagecode/'+imagecode+'/size/thumb/format/jpeg/foo/48941></a>';
+			
+			//split * 
+			var Jval = idexperimento + '*5*'+latitude+'*'+longitude+'*'+taxon+'*'+ coletor+'*'+numcoleta+'**'+imagecode+'**'+ pais+'*'+ estado+'*'+ cidade + '*' + herbario + '*' + tombo + '*' + localidade; 
+				body += '<tr class="even pointer"><td class="a-center "><input name="chtestemunho[]" id="chtestemunho[]" value="'+Jval+'" type="checkbox" ></td>';
+				body +='<td class=" ">'+html_imagem+ ' ' + taxon+'</td>';
+				body +='<td class="a-right a-right ">SpeciesLink</td>';
+				body +='<td class="a-right a-right ">'+herbario+'</td>';
+				body +='<td class="a-right a-right ">'+tombo+'</td>';
+				body +='<td class="a-right a-right ">'+coletor+' '+numcoleta+'</td>';
+				body +='<td class=" ">'+latitude+', '+longitude+'</td>';
+				body +='<td class=" ">'+pais+'</td>';
+				body +='<td class=" ">'+estado+'</td>';
+				body +='<td class=" ">'+cidade+'</td>';
+				body +='<td class=" ">'+localidade+'</td>';
+		} catch (error) {
+			//console.log(error)
+		}
+	}
+	
+	var table = '';
+	table += '<table class="table table-striped responsive-utilities jambo_table bulk_action"><thead><tr class="headings"><th><input type="checkbox" id="chkboxtodos2" name="chkboxtodos2" onclick="selecionaTodos2(true);">';
+	table += '</th><th class="column-title">Táxon </th><th class="column-title">Origem </th><th class="column-title">Coleção</th><th class="column-title">Tombo </th><th class="column-title">Coletor </th><th class="column-title">Coordenadas </th>';
+	table += '<th class="column-title">País</th><th class="column-title">Estado</th><th class="column-title">Município</th><th class="column-title">Localidade</th>';
+	table += '<a class="antoo" style="color:#fff; font-weight:500;">Total de Registros selecionados: ( <span class="action-cnt"> </span> ) </a>';
+	table += '</th></tr></thead>';
+	table += '<tbody><td class="a-center total-busca" colspan=11>Total:' + (contador)  + '</td>'+body+'</tbody></table>';
+	table += '';
+	
+	document.getElementById("div_resultadobusca").innerHTML = table;
+}
+
+async function getSpeciesLink(sp)
+{	
+	return new Promise(function(resolve, reject) {
+		//console.log('species link ' + sp);
+		var data = new FormData();
+		data.append('ScientificName', sp);
+		data.append('Scope', 'plants');
+		data.append('Format', 'JSON');
+		data.append("Images", "yes");
+		
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://php7.jbrj.gov.br:8443/splink?ScientificName='+sp+'&Scope=plants&Format=JSON', true);
+		xhr.onload = function () {
+			// do something to response
+			const data = JSON.parse(this.responseText);
+			console.log(data) 
+			resolve(data)
+		};
+		xhr.send();
+	})
+}
+
 function extractComponents (url) {
 	//server
+	//console.log('hv url')
+	//console.log(url)
 	if(url.indexOf('|')) url = url.split('|')[0];
 	var server = url.match(new RegExp('http://' + "(.*)" + '/fsi')) || url.match(new RegExp("(.*)" + '/fsi'));
 	if(server && server.length) server = server[1];
@@ -935,7 +1061,9 @@ function extractComponents (url) {
 	path_file = path_file.split('/');
 	var path = path_file.slice(0, -1).join('/');
 	var file = path_file.slice(-1)[0]
-	return { 'server': server, 'path': path, 'file':file}; 
+	// console.log({ 'server': server, 'path': path, 'file':file });
+	// console.log('\n\n')
+	return { 'server': server, 'path': path, 'file':file }; 
 }
 
 var unicode = [
