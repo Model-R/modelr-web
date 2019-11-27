@@ -192,95 +192,6 @@ Licence URI: http://www.os-templates.com/template-terms
 						</div>
 					</div>
 					<!-- ./Team member -->
-				</div>
-			</div>
-				
-			<!-- Second Half -->
-
-			<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
-				<h3 class="role-title" onClick="toggleTeam('bolsistas')">Pesquisadores</h3>
-				<div id="bolsistas" class="row">
-					<!-- Team member -->
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-							<div class="mainflip">
-								<div class="frontside">
-									<div class="card">
-										<div class="card-body text-center">
-											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
-											<p><img class=" img-fluid" src="images/equipe/andreasanchez.png" alt="card image"></p>
-											<h4 class="card-title">Andrea Sánchez Tapia</h4>
-											<p class="card-text"></p>
-											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="backside">
-									<div class="card">
-										<div class="card-body text-center mt-4">
-											<p class="card-text">Bióloga (Universidade Nacional da Colômbia, 2006), Especialista em Gestão Ambiental (COPPE/UFRJ, 2008), Mestre em Ecologia (UFRJ, 2011). Estudante de doutorado do Programa de Pós-graduação em Botânica na Escola Nacional de Botânica Tropical (ENBT-JBRJ 2013-2017). Experiência em ecologia de comunidades vegetais com ênfase em ecologia quantitativa, estruturação de comunidades, ecologia da restauração e modelos de nicho ecológico.</p>
-											<a href="http://lattes.cnpq.br/8900415459588165"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- ./Team member -->
-					<!-- Team member -->
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-							<div class="mainflip">
-								<div class="frontside">
-									<div class="card">
-										<div class="card-body text-center">
-											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
-											<p><img class=" img-fluid" src="images/equipe/diogo.png" alt="card image"></p>
-											<h4 class="card-title">Diogo Souza Bezerra Rocha</h4>
-											<p class="card-text"></p>
-											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="backside">
-									<div class="card">
-										<div class="card-body text-center mt-4">
-											<p class="card-text">Doutor em Ecologia e Conservação da Biodiversidade pela Universidade Estadual de Santa Cruz (UESC). Mestre em Botânica pelo Programa de Pós-Graduação em Botânica da Universidade Estadual de Feira de Santana (UEFS) . Bacharel em Ciências Biológicas, com ênfase em Ecologia pela UEFS. Tem experiência em ambiente de programação R e programas de Sistema de Informação Geográfica (SIG) como o ArcGIS. Desenvolve pesquisa nos seguintes temas: Fitossociologia / estrutura de comunidades, Modelagem de Distribuição de Espécies e Mata Atlântica.</p>
-											<a href="http://lattes.cnpq.br/7375573875959020"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- ./Team member -->
-					<!-- Team member -->
-					<div class="col-xs-12 col-sm-6 col-md-4">
-						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
-							<div class="mainflip">
-								<div class="frontside">
-									<div class="card">
-										<div class="card-body text-center">
-											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
-											<p><img class=" img-fluid" src="images/equipe/marcos.png" alt="card image"></p>
-											<h4 class="card-title">Marcos Guimarães Antunes</h4>
-											<p class="card-text"></p>
-											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="backside">
-									<div class="card">
-										<div class="card-body text-center mt-4">
-											<p class="card-text">Possui graduação em Ciência da Computação pela Universidade Federal do Rio de Janeiro (2017). Atualmente é desenvolvedor - Uplay Tecnologia Ltda. Tem experiência no desenvolvimento de aplicações front-end (HTML, CSS, JavaScript e Angular Material) e Chatbots para Facebook Messenger.</p>
-											<a href="http://lattes.cnpq.br/6480779747844836"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- ./Team member -->
 					<!-- Team member -->
 					<div class="col-xs-12 col-sm-6 col-md-4">
 						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
@@ -389,7 +300,203 @@ Licence URI: http://www.os-templates.com/template-terms
 						</div>
 					</div>
 					<!-- ./Team member -->
+				</div>
+			</div>
+				
+			<!-- Second Half -->
 
+			<div class="col-md-6 p-0 bg-white h-md-100 loginarea">
+				<h3 class="role-title" onClick="toggleTeam('bolsistas')">Pesquisadores</h3>
+				<div id="bolsistas" class="row">
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/andreasanchez.png" alt="card image"></p>
+											<h4 class="card-title">Andrea Sánchez Tapia</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Bióloga (Universidade Nacional da Colômbia, 2006), Especialista em Gestão Ambiental (COPPE/UFRJ, 2008), Mestre em Ecologia (UFRJ, 2011). Estudante de doutorado do Programa de Pós-graduação em Botânica na Escola Nacional de Botânica Tropical (ENBT-JBRJ 2013-2017). Experiência em ecologia de comunidades vegetais com ênfase em ecologia quantitativa, estruturação de comunidades, ecologia da restauração e modelos de nicho ecológico.</p>
+											<a href="http://lattes.cnpq.br/8900415459588165"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/diogo.png" alt="card image"></p>
+											<h4 class="card-title">Diogo Souza Bezerra Rocha</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Doutor em Ecologia e Conservação da Biodiversidade pela Universidade Estadual de Santa Cruz (UESC). Mestre em Botânica pelo Programa de Pós-Graduação em Botânica da Universidade Estadual de Feira de Santana (UEFS) . Bacharel em Ciências Biológicas, com ênfase em Ecologia pela UEFS. Tem experiência em ambiente de programação R e programas de Sistema de Informação Geográfica (SIG) como o ArcGIS. Desenvolve pesquisa nos seguintes temas: Fitossociologia / estrutura de comunidades, Modelagem de Distribuição de Espécies e Mata Atlântica.</p>
+											<a href="http://lattes.cnpq.br/7375573875959020"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/saramortara.png" alt="card image"></p>
+											<h4 class="card-title">Sara Ribeiro Mortara</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Sou Bacharel e Licenciada em Ciências Biológicas pela Universidade de São Paulo (USP/ESALQ), mestre pelo programa de Ecologia e Conservação da Biodiversidade na Universidade Estadual de Santa Cruz (UESC) e doutora em Ecologia pela Universidade de São Paulo. Sou pós-doutoranda do Núcleo de Computação Científica e Geoprocessamento do Jardim Botânico do Rio de Janeiro e pesquisadora associada ao Laboratório de Ecologia Teórica do IB-USP. Meu principal interesse é em teoria em Ecologia de Comunidades e Conservação e meu trabalho envolve relacionar dados empíricos com modelos estatísticos para compreender os processos que afetam comunidades e subsidiar ações de conservação.</p>
+											<a href="http://lattes.cnpq.br/1367565226603309"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/kelefirmiano.png" alt="card image"></p>
+											<h4 class="card-title">Kele Rocha Firmiano</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Graduada em Ciências Biológicas pela Universidade Federal de Minas Gerais. Mestre e Doutora em Ecologia, Conservação e Manejo da Vida Silvestre pela Universidade Federal de Minas Gerais. Atualmente é bolsista no Programa de Capacitação Institucional (CNPq) no Instituto Nacional da Mata Atlântica (INMA), baseada no Instituto de Pesquisas Jardim Botânico do Rio de Janeiro onde investiga os impactos de mudanças climáticas na distribuição de espécies arbóreas e arbustivas da Bacia Hidrográfica do Rio Doce. Possui experiência em ecologia de ecossistemas aquáticos com ênfase em comunidades de macroinvertebrados bentônicos bioindicadores de qualidade água. Principais trabalhos abordam: limiares ecológicos, perda de biodiversidade, uso e ocupação do solo, atributos funcionais, dispersão, metacomunidades e filtros ambientais.</p>
+											<a href="http://lattes.cnpq.br/9930203288918332"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/brunocarvalho.png" alt="card image"></p>
+											<h4 class="card-title">Bruno Moreira de Carvalho</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Doutor em Ecologia e Evolução pela Universidade do Estado do Rio de Janeiro (2016), com estágio de doutorado sanduíche na London School of Hygiene and Tropical Medicine, University of London, Inglaterra (2015). Mestre em Biologia Parasitária pelo Instituto Oswaldo Cruz, Fundação Oswaldo Cruz (2011). Graduação em Ciências Biológicas pela Universidade Estácio de Sá nas habilitações Bacharelado (2008) e Licenciatura (2006). Entomologista especializado em mapeamentos da distribuição potencial de vetores de doenças em cenários de mudanças climáticas através de modelagem de nicho ecológico. Atualmente é bolsista pelo Programa de Capacitação Institucional nível DA (CNPq) no Instituto Nacional da Mata Atlântica (INMA), baseado no Instituto de Pesquisas Jardim Botânico do Rio de Janeiro. Principais trabalhos incluem os tópicos: ecologia de doenças, biogeografia, mudanças climáticas, modelagem matemática, análise espacial, biologia e taxonomia de flebotomíneos, eco-epidemiologia das leishmanioses.</p>
+											<a href="http://lattes.cnpq.br/5725434538672496"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/tainarocha.png" alt="card image"></p>
+											<h4 class="card-title">Tainá Carreira da Rocha</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Tem doutorado pelo Programa de Pós-Graduação em Zoologia do Museu Paraense Emílio Goeldi/ UFPa. Mestrado pelo Programa de Pós-Graduação em Biologia Ambiental do Instituto de Estudos Costeiros/ UFPa. Graduada em licenciatura plena em ciência biológicas pela Universidade Federal do Pará (UFPa). Tem como principal linha de pesquisa as mudanças globais (mudanças climáticas e de uso e cobertura do solo) e suas implicações para biodiversidade e conservação, utilizando como ferramenta análises espaciais (SIG) e modelos de nicho ecológico, desenvolvidos e testados através da plataforma R. Atua na linha de pesquisa biogeografia, para compreender padrões de distribuição de espécies de aves dos biomas Amazônia e Mata Atlântica. E atua na docência e extensão no ensino Fundamental e Médio.</p>
+											<a href="http://lattes.cnpq.br/3678449749062447"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
+					<!-- Team member -->
+					<div class="col-xs-12 col-sm-6 col-md-4">
+						<div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+							<div class="mainflip">
+								<div class="frontside">
+									<div class="card">
+										<div class="card-body text-center">
+											<p><img class=" img-fluid card-background-image" src="images/demo/backgrounds/rsz_1fundo-jb.jpg"></p>
+											<p><img class=" img-fluid" src="images/equipe/marcos.png" alt="card image"></p>
+											<h4 class="card-title">Marcos Guimarães Antunes</h4>
+											<p class="card-text"></p>
+											<a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="backside">
+									<div class="card">
+										<div class="card-body text-center mt-4">
+											<p class="card-text">Possui graduação em Ciência da Computação pela Universidade Federal do Rio de Janeiro (2017). Atualmente é desenvolvedor - Uplay Tecnologia Ltda. Tem experiência no desenvolvimento de aplicações front-end (HTML, CSS, JavaScript e Angular Material) e Chatbots para Facebook Messenger.</p>
+											<a href="http://lattes.cnpq.br/6480779747844836"><img src="images/lattes.png" alt="Currículo Lattes" class="lattes"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ./Team member -->
 				</div>
 			</div>
 			
