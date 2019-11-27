@@ -11,6 +11,7 @@ $municipios = isset($_GET["municipio"]) ? $_REQUEST['municipio'] : null;
 $herbarios = isset($_GET["herbario"]) ? $_REQUEST['herbario'] : null;
 $estados = isset($_GET["estado"]) ? $_REQUEST['estado'] : null;
 
+//["Crotalaria altipes", "Crotalaria cuneifolia", "Crotalaria lechnaultii", "Crotalaria leschenaultii", "Crotalaria macrophylla", "Crotalaria macrophylla", "Crotalaria retzii", "Crotalaria sericea"]
 if($especies === NULL && $municipios === NULL && $herbarios === NULL && $estados === NULL){
 	echo "Adicione um campo válido, por favor !<br><br>	
 	Campos disponíveis:<br>
@@ -68,8 +69,8 @@ if($estados !== NULL){
 }
 
 $sql = substr_replace($sql ,"", -3);
-//echo $sql;
-//exit;
+// echo $sql;
+// exit;
 
 $res = pg_exec($conn,$sql);
 $totalregistroselecionados = pg_num_rows($res); 

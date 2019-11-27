@@ -306,6 +306,7 @@ function contaSelecionados(objeto)
 			conta = conta + 1;
 		}
 	}
+	console.log('conta selecionados', conta);
 	return conta;
 }
 
@@ -360,9 +361,11 @@ function getTaxonKeyGbif(sp)
 				//console.log('resultado gbif');
 				var myObj = JSON.parse(this.responseText);
 				if(myObj.results.length){
-					document.getElementById("demo").innerHTML = myObj.results[0]["key"]; //this.responseText;//myObj.result[key];//count;
-					//gbif(myObj.results[0]["key"]);
-					jabot(myObj.results[0]["key"])
+					let data = myObj.results.find((res) => res.taxonomicStatus == 'ACCEPTED');
+					let key = data.key
+					document.getElementById("demo").innerHTML = key; //this.responseText;//myObj.result[key];//count;
+					//gbif(key);
+					jabot(key)
 				} else {
 					jabot(null);
 				}
@@ -375,8 +378,9 @@ function getTaxonKeyGbif(sp)
 	}
 }
 
-function jabot (gbifTaxonKey) {
-	//alert(taxonKey);
+async function jabot (gbifTaxonKey) {
+	let synonyms = await getSpecieSynonym(<?php echo '"' . $especie . '"'; ?>)
+	console.log(synonyms);
     var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function() {
 		if (this.readyState == 4 && this.status == 200) {
@@ -392,14 +396,12 @@ function jabot (gbifTaxonKey) {
 	};
 	
 	if(document.getElementById('checkfontejabot').checked==true){
-		xmlhttp.open("GET", <?php echo "'https://model-r.jbrj.gov.br/modelr-web/execjabot.php?especie=" . $especie . "'"; ?>, true);
+		xmlhttp.open("GET", `https://model-r.jbrj.gov.br/modelr-web/execjabot.php?especie=${synonyms.join(',')}`);
 		xmlhttp.send();
 	} else {
 		//gbif(gbifTaxonKey, [])
 		getAllGbif(gbifTaxonKey, 0, [], [])
 	}
-
-
 }
 
 function printJabotOnly(jabotData){
@@ -1044,6 +1046,35 @@ async function getSpeciesLink(sp)
 			resolve(data)
 		};
 		xhr.send();
+	})
+}
+
+function getSpecieSynonym (sp) {
+	return new Promise(function(resolve, reject) {
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				var myObj = JSON.parse(this.responseText);
+				if(myObj.results.length){
+					let key = myObj.results[0]["key"];
+					var xhr = new XMLHttpRequest();
+					xhr.open('GET', 'https://api.gbif.org/v1/species/'+key+'/synonyms', true);
+					xhr.onload = function () {
+						// do something to response
+						const data = JSON.parse(this.responseText);
+						console.log(data) 
+						let synonyms = [sp];
+						for(let sym of data.results){
+							synonyms.push(sym.canonicalName)
+						}
+						resolve(synonyms)
+					};
+					xhr.send();
+				}
+			}
+		};
+		xmlhttp.open("GET", "https://api.gbif.org/v1/species?name="+sp, true);
+		xmlhttp.send();
 	})
 }
 
