@@ -25,8 +25,7 @@ while (list ($key,$val) = @each($box)) {
 		array_push($gbifData,$val);
 	}
 }
-print_r($box);
-exit;
+// s
 $bool_automaticfilter = $bool_automaticfilter === 'true'? true: false;
 $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 
@@ -83,11 +82,12 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 	// print_r($box);
 	// exit;
 	$in = 'extracao_jabot_geral.codtestemunho in (';
-	while (list ($key,$val) = @each($box)) { 
+	while (list ($key,$val) = @each($box)) {
+		
 		//$result = $Cobertura->excluir($val);
 		$val = explode("*", $val);
-		//echo $val.'<br>';
-		//echo '<br>';
+		// print_r($val);
+		// echo '<br>';
 		$idexperimento = $val[0];
 		$fontedados = $val[1];
 		$latitude = $val[2];
@@ -132,7 +132,6 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 	} 
 	
 //}
-exit;
 if($bool_automaticfilter === true){
 	header("Location: exec.atualizarpontos.php?idstatus=99&idponto=&latinf=&longinf=&id=$idexperimento");
 } else {

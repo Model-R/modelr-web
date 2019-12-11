@@ -662,8 +662,8 @@ function adicionarOcorrencia()
 	if (contaSelecionados(document.getElementsByName('chtestemunho[]'))>0 && !multipleSpecies)
 	{
 		exibe('loading','Adicionando Ocorrências');
-		// document.getElementById('frm2').action='exec.adicionarocorrencia.php?filtro=' + document.getElementById('edtfiltroautomatico').checked;
-		// document.getElementById('frm2').submit();
+		document.getElementById('frm2').action='exec.adicionarocorrencia.php?filtro=' + document.getElementById('edtfiltroautomatico').checked;
+		document.getElementById('frm2').submit();
 	}
     else if(contaSelecionados(document.getElementsByName('chtestemunho[]'))>0 && multipleSpecies){
 		$('#multSpeciesModal').modal('show');

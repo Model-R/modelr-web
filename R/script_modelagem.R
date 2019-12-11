@@ -5,8 +5,8 @@
 # Carregando pacotes
 require(modleR)
 require(raster)
-require(vegan)
-require(psych)
+#require(vegan)
+#require(psych)
 require(stringr)
 require(gtools)
 
@@ -199,6 +199,7 @@ for (especie in especies) {
 	               consensus_level = as.numeric(threshold_bin),
 	               write_png = T)
 
+	cat ('acabou pacote modler \n\n\n\n\n')
     #Ajuste título da imagem pasta ENSEMBLE
     for (model in modelsArray[[1]]) {
         ensemble_files <-  list.files(paste0(resultFolder, hashId,"/",especie, "/present/ensemble"),

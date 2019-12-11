@@ -73,12 +73,13 @@ $id=$_REQUEST['id'];
 			<thead>
 				<tr>
 				<th>algoritmo</th>
+				<th>% treinamento</th>
 				<th>partition</th>
 				<th>kappa</th>
-				<th>spec_sens</th>
-				<th>no_omission</th>
+				<th>th spec_sens</th>
+				<th>th no_omission</th>
 				<th>prevalence</th>
-				<th>equal_sens_spec</th>
+				<th>th equal_sens_spec</th>
 				<th>sensitivity</th>
 				<th>AUC</th>
 				<th>TSS</th>
@@ -86,6 +87,16 @@ $id=$_REQUEST['id'];
 			</thead>
 			<?php
 			
+			$sql2 = 'select * from modelr.experiment where idexperiment='.$id;
+			$res2 = pg_exec($conn,$sql2);
+			while ($row2 = pg_fetch_array($res2))
+			{
+				if($row2['idpartitiontype'] == 1){
+					$trainpercent = number_format(100 - (100/$row2['num_partition']), 2, ',', '');
+				}else {
+					$trainpercent = $row2['trainpercent'];
+				}
+			}
 			$sql = 'select distinct algorithm,partition,kappa,spec_sens,no_omission,prevalence,equal_sens_spec,sensitivity,auc,tss from modelr.experiment_result where idexperiment='.$id.' order by partition,algorithm';
 			$res = pg_exec($conn,$sql);
 			while ($row = pg_fetch_array($res))
@@ -102,6 +113,7 @@ $id=$_REQUEST['id'];
 				$partition = $row['partition'];
 				echo '<tr>';
 		   echo '<td>'.$algoritmo.'</td>';
+		   echo '<td>'.$trainpercent.'</td>';
 		   echo '<td>'.$partition.'</td>';
 		   echo '<td>'.$kappa.'</td>';
 		   echo '<td>'.$spec_sens.'</td>';

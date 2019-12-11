@@ -5,8 +5,8 @@
 # Carregando pacotes
 require(ModelR)
 require(raster)
-require(vegan)
-require(psych)
+#require(vegan)
+#require(psych)
 
 args <- commandArgs(TRUE)
 id <- args[1]

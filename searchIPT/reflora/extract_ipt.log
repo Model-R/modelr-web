@@ -14368,3 +14368,1851 @@ File in cache
 4                                         GENERO                         
 5             yco                        ESPECIE                    Mart.
 6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+v2File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+File in cache
+       id           type collectionCode     basisOfRecord occurrenceID
+1 2704610 PhysicalObject           ALCB PreservedSpecimen      2704610
+2 2704141 PhysicalObject           ALCB PreservedSpecimen      2704141
+3 2704142 PhysicalObject           ALCB PreservedSpecimen      2704142
+4 2704143 PhysicalObject           ALCB PreservedSpecimen      2704143
+5 2704144 PhysicalObject           ALCB PreservedSpecimen      2704144
+6 2704145 PhysicalObject           ALCB PreservedSpecimen      2704145
+  catalogNumber recordNumber
+1    ALCB000451         6423
+2    ALCB000625             
+3    ALCB000443         9661
+4    ALCB000616        15189
+5    ALCB000656        24858
+6    ALCB000975         1319
+                                                            recordedBy
+1                       Guedes, ML;Guedes, M.L.,Alunos de Botânica III
+2                                Guedes, ML;Guedes, M.L.,et. al,et al.
+3                                       Guedes, ML;Guedes, M.L.,et al.
+4 Guedes, ML;Guedes, M.L.,Alunos de Botânica III,Gomes, F.S.,Gomes, FS
+5                                     Fróes, RL;Fróes, R.L.,Pinto, GCP
+6                                              Guedes, ML;Guedes, M.L.
+                                                                      associatedMedia
+1 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/51/ALCB000451.JPG
+2 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/25/ALCB000625.JPG
+3 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/4/43/ALCB000443.JPG
+4 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/16/ALCB000616.JPG
+5 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/6/56/ALCB000656.JPG
+6 http://imagens1.jbrj.gov.br/fsi/server?type=image&source=alcb/0/9/75/ALCB000975.JPG
+  year month day country  stateProvince municipality
+1 1999     9   8  Brasil          Bahia     Salvador
+2 1993    NA  NA  Brasil          Bahia        Cairu
+3 2002     2   3  Brasil          Bahia    Caravelas
+4 2009     5   2  Brasil          Bahia        Piatã
+5 1949     8  NA  Brasil       Amazonas             
+6 1987     8   7  Brasil Espírito Santo    Guarapari
+                       locality decimalLatitude decimalLongitude
+1 Região Metropolitana Salvador       -12.58000        -38.30000
+2                     Baixo Sul       -13.29000        -39.02000
+3                   Extremo Sul       -17.44083        -39.45167
+4            Chapada Diamantina       -13.04472        -41.53389
+5                                            NA               NA
+6                                            NA               NA
+                identifiedBy dateIdentified typeStatus
+1                 Guedes, ML         9/1999           
+2                                     s. d.           
+3                 Guedes, ML          s. d.           
+4                 Guedes, ML         8/2009           
+5 Guedes, ML; Queiroz, LP de         1/1987           
+6                                     s. d.           
+                          scientificName         genus       family
+1      Lygodiaceae Lygodium volubile Sw.      Lygodium  Lygodiaceae
+2                      Anemiaceae Anemia        Anemia   Anemiaceae
+3 Bignoniaceae Fridericia speciosa Mart.    Fridericia Bignoniaceae
+4                      Anemiaceae Anemia        Anemia   Anemiaceae
+5    Capparaceae Colicodendron yco Mart. Colicodendron  Capparaceae
+6                  Lindsaeaceae Lindsaea      Lindsaea Lindsaeaceae
+  specificEpithet infraspecificEpithet taxonRank scientificNameAuthorship
+1        volubile                        ESPECIE                      Sw.
+2                                         GENERO                         
+3        speciosa                        ESPECIE                    Mart.
+4                                         GENERO                         
+5             yco                        ESPECIE                    Mart.
+6                                         GENERO                         

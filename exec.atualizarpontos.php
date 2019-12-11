@@ -58,6 +58,7 @@ $lista = $idponto;
 $MSGCODIGO = 19;
 
 if ($latinf === '0' || $longinf === '0') {
+	echo '1';
 	foreach($lista as $idponto){
 		$sql = "update modelr.occurrence set idstatusoccurrence=$idstatus,lat2=$latinf, long2=$longinf ";
 		
@@ -69,6 +70,7 @@ if ($latinf === '0' || $longinf === '0') {
 }
 else if ((($latinf != 'undefined') && (!empty($latinf))) || (($longinf != 'undefined') && (!empty($longinf))))
 {
+	echo '2';
 	//$Experimento->excluirPonto($idexperimento,$idponto,$idstatus,$latinf,$longinf);
 	foreach($lista as $idponto){
 		$sql = "update modelr.occurrence set idstatusoccurrence=$idstatus,lat2=$latinf, long2=$longinf ";
@@ -80,6 +82,7 @@ else if ((($latinf != 'undefined') && (!empty($latinf))) || (($longinf != 'undef
 	}
 }
 else if($mult == true || $statusOnly == true){
+	echo '3';
 	foreach($lista as $idponto){
 		$sql = "update modelr.occurrence set idstatusoccurrence=$idstatus ";
 		
@@ -92,6 +95,7 @@ else if($mult == true || $statusOnly == true){
 }
 else
 {
+	echo 'else';
 	//$lista = $_REQUEST['table_records'];
 	// FORA DO LIMITE DO BRASIL
 	
@@ -116,10 +120,12 @@ else
 	// georreferenciar coordenadas
 	if (($idstatus=='3') || ($idstatus=='99'))
 	{
+		echo 'georreferenciar';
 		$sql = "select * from modelr.occurrence where idexperiment = ".$idexperimento." and idstatusoccurrence <> 13 and lat is null and long is null";
 		$res = pg_exec($conn,$sql);
 		// echo $sql;
 		// echo '<br>';
+
 		while ($row = pg_fetch_array($res))
 		{	
 			// print_r($row);
@@ -138,6 +144,17 @@ else
 				// echo '<br>';
 				$res4 = pg_exec($conn,$sql4);
 			}
+		}
+
+		$sql5 = "select * from modelr.occurrence where idexperiment = ".$idexperimento." and lat is null and long is null and lat2 is null and long2 is null";
+		$res5 = pg_exec($conn,$sql5);
+		// echo $sql;
+		// echo '<br>';
+
+		while ($row5 = pg_fetch_array($res5))
+		{
+			$sql6 = "update modelr.occurrence set idstatusoccurrence=3 where idoccurrence = ".$row5['idoccurrence'];
+				$res6 = pg_exec($conn,$sql6);
 		}
 	}
 	
@@ -316,7 +333,7 @@ if($idstatus == '4' || $idstatus == '17'){
 	$occurrenceList = $json[0]->occurrences;
 	$count = 0;
 	foreach($occurrenceList as $occurrence){
-		$item = [];
+		$item = []; 
 		if($occurrence->idstatusoccurrence == 4 || $occurrence->idstatusoccurrence == 17){
 			if($occurrence->lat_ajustada != "") $lat = $occurrence->lat_ajustada;
 			else $lat = $occurrence->lat;
@@ -329,9 +346,10 @@ if($idstatus == '4' || $idstatus == '17'){
 		}
 	}
 	fclose($file);
-	
+
 	$ocorrenciasCSVPath = $baseUrl . 'temp/'. $idexperimento . '/ocorrencias.csv';
 	exec("Rscript R/extent-points.r " . $idexperimento . ' ' . $ocorrenciasCSVPath, $a, $b);
+
 	$oeste = str_replace('xmin',"",$a[1]);
 	$oeste = str_replace(' ',"",$oeste);
 	$oeste = str_replace(':',"",$oeste);
