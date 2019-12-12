@@ -251,7 +251,7 @@ if ($op=='A')
             </div>
         </div>
     </div>	
-    <table id="points_table" class="table table-striped jambo_table bulk_action">
+    <table id="points_table" class="table table-striped jambo_table bulk_action" style="table-layout: fixed;">
         <thead>
             <tr class="headings">
                 <th class="a-center">
@@ -259,7 +259,7 @@ if ($op=='A')
                     <a style="margin-left: 1px;" data-toggle="tooltip" data-placement="top" title data-original-title="Editar" onclick="abreModelMultiplosPontos()" class="points-table-action-header"><span class="glyphicon glyphicon-edit edit-button" aria-hidden="true"></span></a>
                 </th>
                 <th class="column-title">Imagem</th>
-				<th class="column-title">Origem</th>
+				<th class="column-title" style="width: 200px;">Origem</th>
                 <th class="column-title">Espécie</th>
                 <th class="column-title">Coletor</th>
                 <th class="column-title">Localização</th>
@@ -332,10 +332,10 @@ while ($row = pg_fetch_array($res))
 								
     <tr class="even pointer points-table-line">
         <td class="a-center "><input type="checkbox" name="table_records[]" id="table_records[]" value="<?php echo $row['idoccurrence'];?>" ><a data-toggle="tooltip" data-placement="top" title data-original-title="Editar" onclick="abreModal('<?php echo $row['taxon'];?>','<?php echo $row['lat'];?>','<?php echo $row['long'];?>','<?php echo $row['idoccurrence'];?>','<?php echo $row[''];?>','<?php echo $row[''];?>','<?php echo $servidor;?>','<?php echo $path;?>','<?php echo $arquivo;?>','<?php echo $row['idstatusoccurrence'];?>','<?php echo $localizacao;?>','<?php echo $coletor;?>','<?php echo $herbario;?>','<?php echo $tombo;?>','<?php echo $status;?>','<?php echo $row['oldlat'];?>','<?php echo $row['oldlong'];?>','<?php echo $row['iddatasource'];?>')">  <span class="glyphicon glyphicon-edit edit-button" aria-hidden="true"></span></a></td><td><?php echo $html_imagem.' ';?></td>
-        <td class="a-right a-right "><b><?php echo $row['fonte'];?></b></br><?php echo $row['herbario'];?></td>
+        <td class="a-right a-right " style="width: 200px;"><b><?php echo $row['fonte'];?></b></br><?php echo $row['herbario'];?></td>
 		<td class="a-right a-right " style="width: 200px;"><?php echo $row['taxon'];?></td>
         <td class="a-right a-right "><?php echo $row['collector'];?> <?php echo $row['collectnumber'];?></td>
-        <td class=" "><?php if($row['country']) echo $row['country'] . ',';?> <?php if($row['majorarea']) echo $row['majorarea'] . '-';?> <?php if($row['minorarea']) echo $row['minorarea'] . '.';?><br>(<?php echo $row['lat'];?>,<?php echo $row['long'];?>)</td>
+        <td class=" "><?php if($row['country']) echo $row['country'] . ',';?> <?php if($row['majorarea']) echo $row['majorarea'] . '-';?> <?php if($row['minorarea']) echo $row['minorarea'] . '.';?><br>(<?php echo $row['lat'];?>, <?php echo $row['long'];?>)</td>
         <td class=" " style="width: 200px;"><?php echo "<image src='".$icone."'>".' '.$row['statusoccurrence'];?></td>
     </tr>
 	<?php }// while  ?>

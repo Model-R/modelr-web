@@ -117,7 +117,9 @@ $Experimento->incluirAutomaticFilter($idexperimento, $_REQUEST['filtro']);
 		} else {
 			$tombo = 'null';
 		}
-		$localidade= $val[15] ? str_replace("'","`",$val[15]) : '';
+		if(isset($val[15])){
+			$localidade= $val[15] ? str_replace("'","`",$val[15]) : '';
+		}
 		if(empty($herbario)){
 			$fonte = 'CSV';
 		} else if($fontedados == 4) {
